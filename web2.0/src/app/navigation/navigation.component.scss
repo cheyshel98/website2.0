@@ -1,0 +1,29 @@
+@use "../../styles.scss";
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: styles.$headerHeight;
+    background-color: styles.$pumpkin;
+    font-family: styles.$nunito;
+    color: #000;
+
+    h1 {
+        margin: 0;
+        font-family: styles.$dmserif;
+    }
+
+    nav ul{
+        display: flex;
+        flex-flow: row;
+        list-style: none;
+        gap: 15px;
+
+        a {
+            cursor: pointer;
+            font-size: 18px;
+        }
+    }
+}

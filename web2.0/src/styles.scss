@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+
+//Fonts
+$nunito: "Nunito", sans-serif;
+$dmserif: "DM Serif Display", serif;
+
+//Common Style
+$radiusSm: 5px;
+$radiusMd: 15px;
+$headerHeight: 80px;
+$footerHeight: 155px;
+
+//Common Colors
+$white: #fff;
+$black: #000;
+
+//Daylight Colors
+$pumpkin: #e07A5F;
+$cream: #F4F1DE;
+$midnight: #283845;
+$paleGrass: #81B29A;
+$lemon: #F2CC8F;
+$text: $black;
+
+//Mixins
+
+@mixin flex-row {
+    display: flex;
+    flex-flow: wrap;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-flow: column;
+}
+
+@mixin flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+//Mixins End
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $cream;
+
+}
+
+main.main {
+    height: calc(100vh - ($headerHeight + $footerHeight));
+}
+
+a {
+    text-decoration: none;
+    color: $text;
+}
+
+.container {
+    padding: 15px 20px;
+    width: 75%;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: $white;
+    color: $text;
+    border-radius: $radiusMd;
+    height: calc(100% - ($headerHeight + $footerHeight));
+}
+
