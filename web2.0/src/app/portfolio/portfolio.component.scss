@@ -9,6 +9,10 @@ h2, h3 {
     font-family: styles.$dmserif;
 }
 
+p {
+    font-family: styles.$nunito;
+}
+
 article {
     h3 {
         margin-bottom: 20px;
@@ -29,13 +33,54 @@ article {
         align-self: center;
         padding-bottom: 20px;
 
+
         button {
+            position: relative;
             height: 110px;
             width: 200px;
             border: none;
             border-radius: styles.$radiusSm;
             background-color: styles.$lemon;
             font-size: 18px;
+            overflow:hidden;
+
+            span {
+                z-index: 2;
+            }
+
+            &:before, &:after {
+                content: '';
+                position:absolute;
+                height: 130px;
+                top: -11px;
+                transform: rotate(10deg);
+                background-color: styles.$lemon;
+            }
+
+            &:before {
+                width: 30px;
+                left: -40px;
+                transform: left 4s;
+            }
+
+            &:after {
+                width: 5px;
+                left: -50px;
+            }
+        
+            &:hover {
+                background-color: styles.$dark-lemon;
+                &:before {
+                    transition: left 1s;
+                    left: 270px;
+                }
+                &:after {
+                    transition: left 1s;
+                    left: 240px;
+                }
+            }
+
+            
         }
     }
     

@@ -7,7 +7,7 @@ $dmserif: "DM Serif Display", serif;
 //Common Style
 $radiusSm: 5px;
 $radiusMd: 15px;
-$headerHeight: 80px;
+$headerHeight: 100px;
 $footerHeight: 155px;
 
 //Common Colors
@@ -20,6 +20,7 @@ $cream: #F4F1DE;
 $midnight: #283845;
 $paleGrass: #81B29A;
 $lemon: #F2CC8F;
+$dark-lemon: #e0ae5c;
 $text: $black;
 
 //Mixins
@@ -56,16 +57,17 @@ main.main {
     height: calc(100vh - ($headerHeight + $footerHeight));
 }
 
-a {
+a, button {
     text-decoration: none;
     color: $text;
+    cursor: pointer;
 }
 
 .container {
     padding: 15px 20px;
     width: 75%;
     max-width: 900px;
-    margin: 20px auto;
+    margin: 30px auto 20px auto;
     background-color: $white;
     color: $text;
     border-radius: $radiusMd;
