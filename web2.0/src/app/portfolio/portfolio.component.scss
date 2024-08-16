@@ -68,7 +68,7 @@ article {
                 left: -50px;
             }
         
-            &:hover {
+            &:hover { /* gold shine animation effect */
                 background-color: styles.$dark-lemon;
                 &:before {
                     transition: left 1s;

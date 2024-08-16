@@ -7,20 +7,24 @@ $dmserif: "DM Serif Display", serif;
 //Common Style
 $radiusSm: 5px;
 $radiusMd: 15px;
-$headerHeight: 100px;
-$footerHeight: 155px;
+$headerHeight: 120px;
+$footerHeight: 65px;
 
 //Common Colors
 $white: #fff;
 $black: #000;
 
 //Daylight Colors
-$pumpkin: #e07A5F;
+$pumpkin: #e08152; //#e07A5F;
+$orange-crayon: #E57A44;
 $cream: #F4F1DE;
 $midnight: #283845;
-$paleGrass: #81B29A;
+$tiffany-blue: #9AD2CB;
+$grass-green: #81B29A;
+$light-green: #D7EBBA;
 $lemon: #F2CC8F;
 $dark-lemon: #e0ae5c;
+$eggplant: #472836;
 $text: $black;
 
 //Mixins
@@ -67,10 +71,12 @@ a, button {
     padding: 15px 20px;
     width: 75%;
     max-width: 900px;
-    margin: 30px auto 20px auto;
-    background-color: $white;
+    margin: 60px auto 20px auto;
+    background: url(./app/images/textBgd.svg) no-repeat;
+    background-size: auto;
+    //background-color: $white;
     color: $text;
     border-radius: $radiusMd;
-    height: calc(100% - ($headerHeight + $footerHeight));
+    height: calc(100vh - ($headerHeight + $footerHeight));
 }
 
