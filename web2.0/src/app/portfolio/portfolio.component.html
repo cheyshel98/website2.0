@@ -9,12 +9,12 @@
     <article class="projects">
         <h3>Projects</h3>
         <div class="project-links">
-            <button *ngFor="let link of subPageLinks" routeLink="/link.url">
+            <a *ngFor="let link of subPageLinks" routerLink="/{{link.url}}">
                 <span>
                     {{ link.name }}
                 </span>
                 
-            </button>
+            </a>
         </div>
         
     </article>

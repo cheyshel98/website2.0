@@ -1,32 +1,25 @@
 /*
-Error: Invalid CSS after "    height: styles": expected ";", was ".$headerHeight;"
-        on line 8 of C:\Users\cheys\Documents\website2.0\website2.0\web2.0\src\app\navigation\navigation.component.scss
+Error: Invalid CSS after "...@include styles": expected "}", was ".flex-column;"
+        on line 6 of C:\Users\cheys\Documents\website2.0\website2.0\web2.0\src\app\navigation\navigation.component.scss
 
+1: @use "../../styles.scss";
+2: 
 3: header {
-4:     display: flex;
-5:     justify-content: space-between;
-6:     align-items: center;
-7:     padding: 0 20px;
-8:     height: styles.$headerHeight;
-9:     background-color: styles.$pumpkin;
-10:     font-family: styles.$nunito;
-11:     color: #000;
-12: 
-13:     h1 {
+4: 
+5: 
+6:     @include styles.flex-column;
+7:     @include styles.flex-end-center;
+8:     padding: 20px 20px;
+9:     gap: 10px;
+10:     height: styles.$headerHeight;
+11:     background-color: styles.$header-background;
 
 Backtrace:
-C:\Users\cheys\Documents\website2.0\website2.0\web2.0\src\app\navigation\navigation.component.scss:8
+C:\Users\cheys\Documents\website2.0\website2.0\web2.0\src\app\navigation\navigation.component.scss:6
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1208:in `expected'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1203:in `tok!'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:804:in `block in try_declaration'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1254:in `call'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1254:in `rethrow'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:809:in `try_declaration'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:732:in `declaration_or_ruleset'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:697:in `block_child'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:678:in `block'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:679:in `block'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:670:in `ruleset'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:696:in `block_child'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
@@ -46,4 +39,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"    height: styles\": expected \";\", was \".$headerHeight;\"\A         on line 8 of C:\Users\cheys\Documents\website2.0\website2.0\web2.0\src\app\navigation\navigation.component.scss\A \A 3: header {\A 4:     display: flex;\A 5:     justify-content: space-between;\A 6:     align-items: center;\A 7:     padding: 0 20px;\A 8:     height: styles.$headerHeight;\A 9:     background-color: styles.$pumpkin;\A 10:     font-family: styles.$nunito;\A 11:     color: #000;\A 12: \A 13:     h1 {"; }
+  content: "Error: Invalid CSS after \"...@include styles\": expected \"}\", was \".flex-column;\"\A         on line 6 of C:\Users\cheys\Documents\website2.0\website2.0\web2.0\src\app\navigation\navigation.component.scss\A \A 1: @use \"../../styles.scss\";\A 2: \A 3: header {\A 4: \A 5: \A 6:     @include styles.flex-column;\A 7:     @include styles.flex-end-center;\A 8:     padding: 20px 20px;\A 9:     gap: 10px;\A 10:     height: styles.$headerHeight;\A 11:     background-color: styles.$header-background;"; }

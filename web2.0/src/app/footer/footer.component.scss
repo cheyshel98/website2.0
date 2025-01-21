@@ -1,8 +1,6 @@
 @use "../../styles.scss";
 
 footer {
-    position:absolute;
-    bottom: 0;
     width: 100%;
     background-color: styles.$midnight;
     height: styles.$footerHeight;

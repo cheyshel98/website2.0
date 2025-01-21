@@ -1,26 +1,23 @@
 /*
-Error: Invalid CSS after "...-family: styles": expected ";", was ".$dmserif;"
+Error: Invalid CSS after "...@include styles": expected "}", was ".flex-column;"
         on line 4 of C:\Users\cheys\Documents\website2.0\website2.0\web2.0\src\app\portfolio\portfolio.component.scss
 
 1: @use "../../styles.scss";
 2: 
-3: h2 {
-4:     font-family: styles.$dmserif;
-5: }
+3: .container {
+4:     @include styles.flex-column;
+5:     gap: 20px;
+6: }
+7: 
+8: .projects {
+9:     @include styles.flex-column;
 
 Backtrace:
 C:\Users\cheys\Documents\website2.0\website2.0\web2.0\src\app\portfolio\portfolio.component.scss:4
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1208:in `expected'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1203:in `tok!'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:804:in `block in try_declaration'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1254:in `call'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1254:in `rethrow'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:809:in `try_declaration'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:732:in `declaration_or_ruleset'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:697:in `block_child'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:686:in `block_contents'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:678:in `block'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:679:in `block'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:670:in `ruleset'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:696:in `block_child'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
@@ -40,4 +37,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...-family: styles\": expected \";\", was \".$dmserif;\"\A         on line 4 of C:\Users\cheys\Documents\website2.0\website2.0\web2.0\src\app\portfolio\portfolio.component.scss\A \A 1: @use \"../../styles.scss\";\A 2: \A 3: h2 {\A 4:     font-family: styles.$dmserif;\A 5: }"; }
+  content: "Error: Invalid CSS after \"...@include styles\": expected \"}\", was \".flex-column;\"\A         on line 4 of C:\Users\cheys\Documents\website2.0\website2.0\web2.0\src\app\portfolio\portfolio.component.scss\A \A 1: @use \"../../styles.scss\";\A 2: \A 3: .container {\A 4:     @include styles.flex-column;\A 5:     gap: 20px;\A 6: }\A 7: \A 8: .projects {\A 9:     @include styles.flex-column;"; }

@@ -11,20 +11,20 @@ import { SharedModule } from '../shared/shared.module';
 export class PortfolioComponent {
   subPageLinks = [
     {
-      name: 'UI/UX',
-      url: ''
-    },
-    {
       name: 'Web Design',
-      url: ''
+      url: 'portfolio/projects/web-design'
     },
     {
       name: 'Graphic Design',
-      url: ''
+      url: 'portfolio/projects/graphic-design'
+    },
+    {
+      name: 'UI/UX',
+      url: 'portfolio/projects/ui-ux'
     },
     {
       name: 'Motion Graphics',
-      url: ''
+      url: 'portfolio/projects/motion-graphics'
     }
   ]
 
