@@ -8,8 +8,6 @@
 .projects {
     @include styles.flex-column;
 
-    
-
     .project-links {
         @include styles.flex-row;
         @include styles.flex-center;
@@ -19,7 +17,6 @@
         align-self: center;
         padding-bottom: 20px;
 
-
         a {
             @include styles.flex-column;
             @include styles.flex-center;
@@ -28,7 +25,7 @@
             width: 200px;
             border: none;
             border-radius: styles.$radiusSm;
-            background-color: styles.$lemon;
+            background-color: styles.$grass-green;
             font-size: 18px;
             overflow:hidden;
 
@@ -42,7 +39,7 @@
                 height: 130px;
                 top: -11px;
                 transform: rotate(10deg);
-                background-color: styles.$lemon;
+                background-color: styles.$light-green;
             }
 
             &:before {
@@ -56,8 +53,8 @@
                 left: -50px;
             }
         
-            &:hover { /* gold shine animation effect */
-                background-color: styles.$dark-lemon;
+            &:hover, &:focus { /* gold shine animation effect */
+                background-color: styles.$grass-green;
                 &:before {
                     transition: left 1s;
                     left: 270px;

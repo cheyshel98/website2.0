@@ -1,0 +1,73 @@
+@use "../../styles.scss";
+
+
+.card-set {
+    @include styles.flex-column;
+    @include styles.flex-center;
+    gap: 25px;
+}
+
+.card {
+    background-color: styles.$cream;
+    padding: 20px;
+    border-radius: 10px;
+
+    &:first-of-type {
+        margin-top: -25px;
+        padding-top: 20px;
+        position: relative;
+        z-index: -2;
+    }
+
+    .title {
+        font-size: 20px;
+        font-style: italic;
+    }
+
+    .subtitle {
+        @include styles.flex-row;
+        justify-content: space-between;
+    }
+
+    ul {
+        padding-left: 15px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .container {
+        display: grid;
+        grid-template-areas: "head head"
+                             "edu skill"
+                             "exp exp"
+                             "exp exp";
+    
+        h2 {
+            grid-area: head;
+        }
+
+        .skills {
+            grid-area: skill;
+            
+            h3:before {
+                width: calc(100% + 20px);
+            }
+        }
+    
+        .education {
+            grid-area: edu;
+        }
+    
+        .experience {
+            grid-area: exp;
+
+            .card-set {
+                @include styles.flex-row;
+
+                .card {
+                    width: 45%;
+                }
+            }
+        }
+    }
+}

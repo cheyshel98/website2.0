@@ -68,6 +68,7 @@ html {
     min-height: 100vh;
     width: 100vw;
     position: relative;
+    font-family: $nunito;
 }
 
 body {
@@ -99,6 +100,8 @@ a, button {
     cursor: pointer;
 }
 
+//generic container styling
+
 .container {
     @include flex-column;
     gap: 20px;
@@ -114,12 +117,41 @@ a, button {
     box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.15);
     -webkit-box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.15);
     -moz-box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.15);
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 24px;
+        display: block;
+        position: relative;
+        width: fit-content;
+    
+        &:before {
+            content: '';
+            background-color: $lemon;
+            position: absolute;
+            width: calc(100% + 66px);
+            height: calc(100% + 8px);
+            right: -10px;
+            top: -3px; 
+            z-index: -1;
+            border-radius: 5px 10px 10px 5px;
+        }
+    }
+
+    section {
+        z-index: 2;
+    }
+
+    section:not(last-child) {
+        margin-bottom: 20px;
+    }
+
 }
 
-.container h2 {
-    font-size: 32px;
-}
+//generic container styling
 
-.container h3 {
-    font-size: 24px;
+@media screen and (min-width: 800px) {    
 }

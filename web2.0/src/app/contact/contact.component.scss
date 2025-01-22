@@ -1,0 +1,18 @@
+@use "../../styles.scss";
+
+.contact-form {
+    @include styles.flex-column;
+}
+
+.contact-form label {
+    @include styles.flex-column;
+}
+
+.contact-form {
+    width: 75%;
+    margin: 0 auto;
+
+    .contact-details {
+        width: 35%;
+    }
+}

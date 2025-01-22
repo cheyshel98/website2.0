@@ -9,10 +9,10 @@ Error: Invalid CSS after "...@include styles": expected "}", was ".flex-column;"
 8: .projects {
 9:     @include styles.flex-column;
 10: 
-11:     
-12: 
-13:     .project-links {
-14:         @include styles.flex-row;
+11:     .project-links {
+12:         @include styles.flex-row;
+13:         @include styles.flex-center;
+14:         gap: 15px 20px;
 
 Backtrace:
 C:\Users\cheys\Documents\website2.0\website2.0\web2.0\src\app\portfolio\portfolio.component.scss:9
@@ -39,4 +39,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...@include styles\": expected \"}\", was \".flex-column;\"\A         on line 9 of C:\Users\cheys\Documents\website2.0\website2.0\web2.0\src\app\portfolio\portfolio.component.scss\A \A 4: //     @include styles.flex-column;\A 5: //     gap: 20px;\A 6: // }\A 7: \A 8: .projects {\A 9:     @include styles.flex-column;\A 10: \A 11:     \A 12: \A 13:     .project-links {\A 14:         @include styles.flex-row;"; }
+  content: "Error: Invalid CSS after \"...@include styles\": expected \"}\", was \".flex-column;\"\A         on line 9 of C:\Users\cheys\Documents\website2.0\website2.0\web2.0\src\app\portfolio\portfolio.component.scss\A \A 4: //     @include styles.flex-column;\A 5: //     gap: 20px;\A 6: // }\A 7: \A 8: .projects {\A 9:     @include styles.flex-column;\A 10: \A 11:     .project-links {\A 12:         @include styles.flex-row;\A 13:         @include styles.flex-center;\A 14:         gap: 15px 20px;"; }

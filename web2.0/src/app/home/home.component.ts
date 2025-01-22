@@ -12,10 +12,14 @@ export class HomeComponent {
   socialLinks:any = [
     {
       name: 'LinkedIn',
-      url: ''
+      url: 'www.linkedin.com/in/cheyenne-shelton-8063b412b'
     },
     {
       name: 'GitHub',
+      url: 'https://github.com/cheyshel98/website2.0.git'
+    },
+    {
+      name: 'PDF Resume',
       url: ''
     }
   ];
