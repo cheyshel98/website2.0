@@ -1,19 +1,21 @@
 /*
 Error: Invalid CSS after "...@include styles": expected "}", was ".flex-column;"
-        on line 4 of C:\Users\cheys\Documents\website2.0\website2.0\web2.0\src\app\portfolio\portfolio.component.scss
+        on line 9 of C:\Users\cheys\Documents\website2.0\website2.0\web2.0\src\app\portfolio\portfolio.component.scss
 
-1: @use "../../styles.scss";
-2: 
-3: .container {
-4:     @include styles.flex-column;
-5:     gap: 20px;
-6: }
+4: //     @include styles.flex-column;
+5: //     gap: 20px;
+6: // }
 7: 
 8: .projects {
 9:     @include styles.flex-column;
+10: 
+11:     
+12: 
+13:     .project-links {
+14:         @include styles.flex-row;
 
 Backtrace:
-C:\Users\cheys\Documents\website2.0\website2.0\web2.0\src\app\portfolio\portfolio.component.scss:4
+C:\Users\cheys\Documents\website2.0\website2.0\web2.0\src\app\portfolio\portfolio.component.scss:9
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1208:in `expected'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1203:in `tok!'
@@ -37,4 +39,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...@include styles\": expected \"}\", was \".flex-column;\"\A         on line 4 of C:\Users\cheys\Documents\website2.0\website2.0\web2.0\src\app\portfolio\portfolio.component.scss\A \A 1: @use \"../../styles.scss\";\A 2: \A 3: .container {\A 4:     @include styles.flex-column;\A 5:     gap: 20px;\A 6: }\A 7: \A 8: .projects {\A 9:     @include styles.flex-column;"; }
+  content: "Error: Invalid CSS after \"...@include styles\": expected \"}\", was \".flex-column;\"\A         on line 9 of C:\Users\cheys\Documents\website2.0\website2.0\web2.0\src\app\portfolio\portfolio.component.scss\A \A 4: //     @include styles.flex-column;\A 5: //     gap: 20px;\A 6: // }\A 7: \A 8: .projects {\A 9:     @include styles.flex-column;\A 10: \A 11:     \A 12: \A 13:     .project-links {\A 14:         @include styles.flex-row;"; }

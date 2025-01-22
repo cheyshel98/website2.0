@@ -1,9 +1,9 @@
 @use "../../styles.scss";
 
-.container {
-    @include styles.flex-column;
-    gap: 20px;
-}
+// .container {
+//     @include styles.flex-column;
+//     gap: 20px;
+// }
 
 .projects {
     @include styles.flex-column;

@@ -8,7 +8,9 @@ Error: Invalid CSS after "...d-color: styles": expected ";", was ".$midnight;"
 4:     width: 100%;
 5:     background-color: styles.$midnight;
 6:     height: styles.$footerHeight;
-7: }
+7:     position: absolute;
+8:     bottom: 0;
+9: }
 
 Backtrace:
 C:\Users\cheys\Documents\website2.0\website2.0\web2.0\src\app\footer\footer.component.scss:5
@@ -42,4 +44,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...d-color: styles\": expected \";\", was \".$midnight;\"\A         on line 5 of C:\Users\cheys\Documents\website2.0\website2.0\web2.0\src\app\footer\footer.component.scss\A \A 1: @use \"../../styles.scss\";\A 2: \A 3: footer {\A 4:     width: 100%;\A 5:     background-color: styles.$midnight;\A 6:     height: styles.$footerHeight;\A 7: }"; }
+  content: "Error: Invalid CSS after \"...d-color: styles\": expected \";\", was \".$midnight;\"\A         on line 5 of C:\Users\cheys\Documents\website2.0\website2.0\web2.0\src\app\footer\footer.component.scss\A \A 1: @use \"../../styles.scss\";\A 2: \A 3: footer {\A 4:     width: 100%;\A 5:     background-color: styles.$midnight;\A 6:     height: styles.$footerHeight;\A 7:     position: absolute;\A 8:     bottom: 0;\A 9: }"; }

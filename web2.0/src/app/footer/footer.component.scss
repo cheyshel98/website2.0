@@ -4,4 +4,6 @@ footer {
     width: 100%;
     background-color: styles.$midnight;
     height: styles.$footerHeight;
+    position: absolute;
+    bottom: 0;
 }

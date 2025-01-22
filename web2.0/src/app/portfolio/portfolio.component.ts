@@ -12,19 +12,19 @@ export class PortfolioComponent {
   subPageLinks = [
     {
       name: 'Web Design',
-      url: 'portfolio/projects/web-design'
+      url: 'portfolio/web-design'
     },
     {
       name: 'Graphic Design',
-      url: 'portfolio/projects/graphic-design'
+      url: 'portfolio/graphic-design'
     },
     {
       name: 'UI/UX',
-      url: 'portfolio/projects/ui-ux'
+      url: 'portfolio/ui-ux'
     },
     {
       name: 'Motion Graphics',
-      url: 'portfolio/projects/motion-graphics'
+      url: 'portfolio/motion-graphics'
     }
   ]
 

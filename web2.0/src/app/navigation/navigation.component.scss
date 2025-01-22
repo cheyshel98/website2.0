@@ -5,7 +5,7 @@ header {
 
     @include styles.flex-column;
     @include styles.flex-end-center;
-    padding: 20px 20px;
+    padding: 20px 20px 15px 20px;
     gap: 10px;
     height: styles.$headerHeight;
     background-color: styles.$header-background;
@@ -15,6 +15,7 @@ header {
     .nav-group {
         @include styles.flex-column;
         @include styles.flex-center;
+        gap: 15px;
     }
 
     h1 {

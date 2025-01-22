@@ -9,7 +9,7 @@ Error: Invalid CSS after "...@include styles": expected "}", was ".flex-column;"
 5: 
 6:     @include styles.flex-column;
 7:     @include styles.flex-end-center;
-8:     padding: 20px 20px;
+8:     padding: 20px 20px 15px 20px;
 9:     gap: 10px;
 10:     height: styles.$headerHeight;
 11:     background-color: styles.$header-background;
@@ -39,4 +39,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...@include styles\": expected \"}\", was \".flex-column;\"\A         on line 6 of C:\Users\cheys\Documents\website2.0\website2.0\web2.0\src\app\navigation\navigation.component.scss\A \A 1: @use \"../../styles.scss\";\A 2: \A 3: header {\A 4: \A 5: \A 6:     @include styles.flex-column;\A 7:     @include styles.flex-end-center;\A 8:     padding: 20px 20px;\A 9:     gap: 10px;\A 10:     height: styles.$headerHeight;\A 11:     background-color: styles.$header-background;"; }
+  content: "Error: Invalid CSS after \"...@include styles\": expected \"}\", was \".flex-column;\"\A         on line 6 of C:\Users\cheys\Documents\website2.0\website2.0\web2.0\src\app\navigation\navigation.component.scss\A \A 1: @use \"../../styles.scss\";\A 2: \A 3: header {\A 4: \A 5: \A 6:     @include styles.flex-column;\A 7:     @include styles.flex-end-center;\A 8:     padding: 20px 20px 15px 20px;\A 9:     gap: 10px;\A 10:     height: styles.$headerHeight;\A 11:     background-color: styles.$header-background;"; }

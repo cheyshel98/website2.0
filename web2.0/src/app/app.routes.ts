@@ -13,10 +13,10 @@ import { MotionGraphicsComponent } from './projects/motion-graphics/motion-graph
 export const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'portfolio', component: PortfolioComponent},
-    {path: 'portfolio/projects/ui-ux', component: UiUxComponent},
-    {path: 'portfolio/projects/web-design', component: WebDesignComponent},
-    {path: 'portfolio/projects/graphic-design', component: GraphicDesignComponent},
-    {path: 'portfolio/projects/motion-graphics', component: MotionGraphicsComponent},
+    {path: 'portfolio/ui-ux', component: UiUxComponent},
+    {path: 'portfolio/web-design', component: WebDesignComponent},
+    {path: 'portfolio/graphic-design', component: GraphicDesignComponent},
+    {path: 'portfolio/motion-graphics', component: MotionGraphicsComponent},
     {path: 'resume', component: ResumeComponent},
     {path: 'contact', component: ContactComponent},
     {path: '**', component: PageNotFoundComponent}
