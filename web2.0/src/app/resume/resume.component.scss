@@ -65,7 +65,7 @@
                 @include styles.flex-row;
 
                 .card {
-                    width: 45%;
+                    width: calc(45% - 25px);
                 }
             }
         }

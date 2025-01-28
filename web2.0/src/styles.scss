@@ -12,6 +12,7 @@ $headerHeight: 125px;
 $headerAfterHeight: calc($headerHeight * .8);
 $footerHeight: 85px;
 $mainMarginBottom: 125px;
+$containerWidth: 1050px;
 
 //Common Colors
 $white: #fff;
@@ -100,6 +101,11 @@ a, button {
     cursor: pointer;
 }
 
+.svg-icon {
+    fill: none;
+    stroke: $eggplant;
+}
+
 //generic container styling
 
 .container {
@@ -107,7 +113,7 @@ a, button {
     gap: 20px;
     padding: 40px 40px;
     width: 85%;
-    max-width: 950px;
+    max-width: $containerWidth;
     margin: 10px auto $mainMarginBottom auto;
     background-color: $white;
     color: $text;
@@ -147,6 +153,12 @@ a, button {
 
     section:not(last-child) {
         margin-bottom: 20px;
+    }
+
+    .cont-header {
+        @include flex-row;
+        justify-content: space-between;
+        align-items: center;
     }
 
 }

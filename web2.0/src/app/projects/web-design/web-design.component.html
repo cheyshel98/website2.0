@@ -1,6 +1,13 @@
 <article class="container">
-    <a routerLink="/portfolio">Go Back to Portfolio</a>
-    <h2>Web Design</h2>
+    <div class="cont-header">
+        <h2>Web Design</h2>
+        <a class="back-link" routerLink="/portfolio">
+            <svg class="svg-icon" width="25" height="25">
+                <use [attr.href]="'#icon-arrow-left'"></use>
+            </svg>
+            Back
+        </a>
+    </div>
     <section>
         <h3>Kale Box Weekly</h3>
         <p>

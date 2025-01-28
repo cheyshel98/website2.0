@@ -1,8 +1,13 @@
 <div class="container">
     <div class="img-social">
-        <img/>
         <div class="social-links">
-            <a href="{{link.url}}" target="_blank" *ngFor="let link of socialLinks">{{ link.name }}</a>
+            <a href="{{link.url}}" target="_blank" *ngFor="let link of socialLinks">
+                <svg class="svg-icon" width="25" height="25">
+                    <title>{{link.name}}</title>
+                    <use [attr.href]="'#icon-' + link.img"></use>
+                </svg>
+                {{ link.name }}
+            </a>
         </div>
     </div>
     <h2>Hello!</h2>

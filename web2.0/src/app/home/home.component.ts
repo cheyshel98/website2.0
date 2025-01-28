@@ -12,15 +12,18 @@ export class HomeComponent {
   socialLinks:any = [
     {
       name: 'LinkedIn',
-      url: 'www.linkedin.com/in/cheyenne-shelton-8063b412b'
+      url: 'www.linkedin.com/in/cheyenne-shelton-8063b412b',
+      img: 'linkedin'
     },
     {
       name: 'GitHub',
-      url: 'https://github.com/cheyshel98/website2.0.git'
+      url: 'https://github.com/cheyshel98/website2.0.git',
+      img: 'github'
     },
     {
       name: 'PDF Resume',
-      url: ''
+      url: '',
+      img: 'file-text'
     }
   ];
 }

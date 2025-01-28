@@ -55,7 +55,7 @@ header {
             align-items: center;
 
             width: 85%;
-            max-width: 925px;
+            max-width: calc(styles.$containerWidth - 25px);
         }
 
         &:after {
