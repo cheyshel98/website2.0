@@ -1,0 +1,41 @@
+@use "../../../styles.scss";
+
+
+.img-link {
+    @include styles.flex-column;
+    @include styles.flex-center;
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+
+    .img {
+        width: 100%;  
+    } 
+}
+
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .75);
+    height: 100%;
+    width: 100%;
+    padding: 65px;
+    z-index: 3;
+
+    @include styles.flex-column;
+    @include styles.flex-center;
+    gap: 10px;
+
+    .img-close {
+        align-self: flex-end;;
+    }
+
+    .img {
+        width: auto;
+        max-height: 80vh;
+        margin: 0 auto;
+    }
+}

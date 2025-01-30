@@ -27,6 +27,7 @@
             border-radius: styles.$radiusSm;
             background-color: styles.$grass-green;
             font-size: 18px;
+            font-weight: 600;
             overflow:hidden;
 
             span {
@@ -65,6 +66,13 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (min-width: 1111px) {
+    .project-links {
+        max-width: unset;
+        width: 100%;
     }
 }
 

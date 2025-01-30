@@ -1,0 +1,11 @@
+
+<a class="img-link" (click)="popup = true" title="Enlarge Image">
+    <img class="img" [src]="'/assets/images/' + src" [alt]="alt">
+</a>
+
+<div class="overlay" *ngIf="popup">
+    <button class="img-close" (click)="popup = false" *ngIf="popup">Close</button>
+    <img class="img" [src]="'/assets/images/' + src" [alt]="alt">
+    <p class="img-text" *ngIf="alt.length > 0">{{ alt }}</p>
+</div>
+

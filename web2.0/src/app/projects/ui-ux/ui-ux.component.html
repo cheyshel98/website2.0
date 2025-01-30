@@ -3,7 +3,7 @@
         <h2>User Interface & User Experience</h2>
         <a class="back-link" routerLink="/portfolio">
             <svg class="svg-icon" width="25" height="25">
-                <use [attr.href]="'#icon-arrow-left'"></use>
+                <use [attr.href]="'/assets/images/symbol-defs.svg#icon-arrow-left'"></use>
             </svg>
             Back
         </a>
@@ -43,33 +43,36 @@
         <p>
             Once I chose my activity, it was time to get to work. I outlined topics to focus on using the student workbook’s guide below: 
         </p>
-        <img alt="Topic Map Worksheet for Usability Study" />
+        <app-image-popup src="topic-map.jpg" alt="Topic Map Worksheet for Usability Study"></app-image-popup>
+        <!-- <img src="/assets/images/topic-map.jpg" alt="Topic Map Worksheet for Usability Study" /> -->
         <p>
             Once I got my topics ready, I contacted 5 of my friends to allow me to conduct contextual interviews with them. Using these topics as a focus, I sat down with each person in their home environment and asked them to pick out a gift for someone they are close with. I recorded the interview as well as took notes about their behavior and what I observed them doing. Every time we were finished, I would gather my notes and the interview audio and fill out the fields in the Contextual Interview Highlights form given to us in the student workbook. Below are my notes on two of the 5 participants, Evan and Trent: 
         </p>
-        <img alt="Evan's Contextual Interview Highlights" />
-        <img alt="Trent's Contextual Interview Highlights" />
+        <div class="img-by-side">
+            <app-image-popup src="evans-interview.jpg" alt="Evan's Contextual Interview Highlights"></app-image-popup>
+            <app-image-popup src="trents-interview.jpg" alt="Trent's Contextual Interview Highlights"></app-image-popup>
+        </div>
         <p>
             After we conducted the interviews, we were then instructed on how to create a persona from them. This course really highlighted the importance of an authentic user persona. David really honed in on the fact that a universal user doesn’t actually exist. It’s important to design with specific people in mind when creating interfaces so that they are usable and enjoyable to use by the target audience. 
         </p>
         <p>
             We were first tasked with creating three persona groups based on our five interviews. Below are the three that I made using the worksheet provided. 
         </p>
-        <img alt="Persona Group Worksheet" />
+        <app-image-popup src="persona-groups.jpg" alt="Persona Group Worksheet"></app-image-popup>
         <p>
             From these three we were then instructed to create an individual persona based on one of the three groups. This persona would be the “Primary Persona” that a design team would work to satisfy in their interface design. This is the most important person to satisfy, because if they are happy with the design, most other users will be as well. These personas are meant to be as authentic as possible and are based on real data observed in our contextual interviews.
         </p>
         <p>
             I chose to create my persona around the “Power Gifter” since their needs were the most complex. We were instructed to name them, draw a picture of them in their environment, write down their behaviors, facts about them, and their needs and goals. Below is my completed persona.
         </p>
-        <img alt="Image of Primary Persona" /> 
+        <app-image-popup src="primary-persona.jpg" alt="Image of Primary Persona"></app-image-popup>
     </section>
     <section>
         <h3>Red Routes</h3>
         <p>
             After we completed our persona activity, we then switched gears to discussing red routes. Red routes are the most important parts of the user interface, because they are the most frequently used and the most critical to the success of the interface. In our workbook, we were instructed to write down ten red routes based on the persona that we made, and then to mark three of them as the most important. Below are the ten I made:
         </p>
-        <img alt="Ten Red Routes" />
+        <app-image-popup src="red-routes.jpg" alt="Ten Red Routes"></app-image-popup>
         <p>
             After the red routes activity, we did a few more activities focusing on user stories and making sure that they are authentic, based in real data, and are something that the user would actually say. Then, we got into designing interfaces.
         </p>

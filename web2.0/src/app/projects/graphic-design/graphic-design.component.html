@@ -3,7 +3,7 @@
         <h2>Graphic Design</h2>
         <a class="back-link" routerLink="/portfolio">
             <svg class="svg-icon" width="25" height="25">
-                <use [attr.href]="'#icon-arrow-left'"></use>
+                <use [attr.href]="'/assets/images/symbol-defs.svg#icon-arrow-left'"></use>
             </svg>
             Back
         </a>
@@ -19,7 +19,7 @@
         <p>
             Below is my submitted work. I provided four different versions to show the versatility of the logo for minimal color options as well as applications on light and dark backgrounds. 
         </p>
-        <img alt="Catfiene Palace Logo"/>
+        <app-image-popup src="Catfiene-Palace.png" alt="Catfiene Palace Logo"></app-image-popup>
     </section>
     <section>
         <h3>Magazine Design Project</h3>
@@ -35,7 +35,7 @@
         <p>
             Below you can see both of these submissions:
         </p>
-        <img alt="Mock Magazine Cover titled 'Big Sister'" /> 
-        <img alt="Mock Magazine two page spread" />
+        <app-image-popup src="mag-cover.jpg" alt="Mock Magazine Cover titled 'Big Sister"></app-image-popup>
+        <app-image-popup src="two-page-spread.jpg" alt="Mock Magazine two page spread"></app-image-popup>
     </section>
 </article>
