@@ -4,9 +4,12 @@
 .img-link {
     @include styles.flex-column;
     @include styles.flex-center;
-    width: 90%;
     max-width: 500px;
     margin: 0 auto;
+
+    &:focus {
+        border: 3px solid styles.$midnight;
+    }
 
     .img {
         width: 100%;  
@@ -30,12 +33,33 @@
     gap: 10px;
 
     .img-close {
-        align-self: flex-end;;
+        align-self: flex-end;
+
+        .svg-icon {
+            stroke: styles.$white;
+
+            &:hover, &:focus {
+                transform: rotate(90deg);
+                transition: ease-in-out .5s;
+            }
+        }
     }
 
     .img {
         width: auto;
         max-height: 80vh;
+        max-width: 100%;
         margin: 0 auto;
+    }
+    
+    .img-text {
+        color: styles.$white;
+    }
+}
+
+//styles for two photos in one section
+.img-by-side {
+    .img-link {
+        
     }
 }

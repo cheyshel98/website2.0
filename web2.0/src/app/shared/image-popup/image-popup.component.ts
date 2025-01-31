@@ -15,5 +15,17 @@ export class ImagePopupComponent {
   popup:boolean = false;
 
 
+  
+
+
+  imgPopup(open = false) {
+    this.popup = open;
+    const body = document.getElementsByTagName('body')[0];
+    if (open) {
+      body.classList.add('rm-scroll');
+    } else {
+      body.classList.remove('rm-scroll');
+    }
+  }
 
 }

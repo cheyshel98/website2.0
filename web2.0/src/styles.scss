@@ -77,6 +77,11 @@ body {
     background-color: $cream;
 }
 
+.rm-scroll {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
 main.main {
     min-height: calc(100vh - ($headerHeight + $footerHeight));
 }
@@ -99,6 +104,8 @@ a, button {
     text-decoration: none;
     color: $text;
     cursor: pointer;
+    background: none;
+    border: none;
 }
 
 .svg-icon {
@@ -133,6 +140,7 @@ a, button {
         display: block;
         position: relative;
         width: fit-content;
+        z-index: 2;
     
         &:before {
             content: '';
@@ -147,23 +155,37 @@ a, button {
         }
     }
 
-    section {
-        z-index: 2;
-    }
-
     section:not(last-child) {
         margin-bottom: 20px;
     }
 
-    .cont-header {
-        @include flex-row;
+    .cont-header { //used for portfolio sub pages
+        @include flex-column;
+        flex-flow: column-reverse;
         justify-content: space-between;
-        align-items: center;
-    }
+        align-items: flex-start;
 
+        .back-link {
+            @include flex-row;
+            @include flex-center;
+            gap: 5px;
+            font-size: 18px;
+        }
+    }
 }
 
 //generic container styling
 
 @media screen and (min-width: 800px) {    
+    .container {
+        .cont-header {
+            flex-flow: row;
+            align-items: center;
+        }
+
+        .img-by-side {
+            @include flex-row;
+            gap: 10px;
+        }
+    }    
 }
