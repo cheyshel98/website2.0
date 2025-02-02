@@ -11,8 +11,9 @@
     .project-links {
         @include styles.flex-row;
         @include styles.flex-center;
-        gap: 15px 20px;
+        flex-wrap: wrap;
         max-width: 430px;
+        gap: 15px 20px;
         justify-self: center;
         align-self: center;
         padding-bottom: 20px;
@@ -69,10 +70,12 @@
     }
 }
 
-@media screen and (min-width: 1111px) {
-    .project-links {
-        max-width: unset;
-        width: 100%;
+@media screen and (min-width: 1110px) {
+    .projects {
+        .project-links {
+            margin-top: 20px;
+            max-width: 100%;
+        }
     }
 }
 

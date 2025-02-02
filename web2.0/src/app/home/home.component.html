@@ -4,7 +4,7 @@
             <a href="{{link.url}}" target="_blank" *ngFor="let link of socialLinks">
                 <svg class="svg-icon" width="25" height="25">
                     <title>{{link.name}}</title>
-                    <use [attr.href]="'#icon-' + link.img"></use>
+                    <use [attr.href]="'/assets/images/symbol-defs.svg#icon-' + link.img"></use>
                 </svg>
                 {{ link.name }}
             </a>

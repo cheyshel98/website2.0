@@ -6,8 +6,11 @@
     @include styles.flex-center;
     max-width: 500px;
     margin: 0 auto;
+    margin-bottom: 15px;
+    border: 3px solid styles.$white;
 
-    &:focus {
+
+    &:hover, &:focus {
         border: 3px solid styles.$midnight;
     }
 
@@ -57,9 +60,3 @@
     }
 }
 
-//styles for two photos in one section
-.img-by-side {
-    .img-link {
-        
-    }
-}

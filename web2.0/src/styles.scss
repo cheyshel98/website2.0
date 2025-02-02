@@ -38,7 +38,7 @@ $text: $black;
 
 @mixin flex-row {
     display: flex;
-    flex-flow: wrap;
+    flex-flow: row;
 }
 
 @mixin flex-column {
@@ -137,6 +137,7 @@ a, button {
 
     h3 {
         font-size: 24px;
+        font-style: italic;
         display: block;
         position: relative;
         width: fit-content;
@@ -155,11 +156,12 @@ a, button {
         }
     }
 
-    section:not(last-child) {
-        margin-bottom: 20px;
-    }
+    
+}
 
-    .cont-header { //used for portfolio sub pages
+.project { //generic styles for portfolio project pages
+
+    .cont-header {
         @include flex-column;
         flex-flow: column-reverse;
         justify-content: space-between;
@@ -172,6 +174,28 @@ a, button {
             font-size: 18px;
         }
     }
+
+    section:not(:last-child) {
+        margin-bottom: 10px;
+        padding-bottom: 25px;
+        border-bottom: 5px solid $midnight;
+        border-bottom-style: double;
+    }
+
+    p {
+        margin-bottom: 10px;
+
+        &:last-of-type:not(:first-of-type) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .img-by-side { //for two picture layout
+        @include flex-column;
+        gap: 10px;
+    }
+
+    
 }
 
 //generic container styling
@@ -183,9 +207,11 @@ a, button {
             align-items: center;
         }
 
-        .img-by-side {
+        .img-by-side { //two picture layout on desktop
             @include flex-row;
-            gap: 10px;
+            align-items: center;
+            width: 60%;
+            margin: 0 auto;
         }
     }    
 }
