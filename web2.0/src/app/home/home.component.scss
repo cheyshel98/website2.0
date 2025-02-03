@@ -1,6 +1,59 @@
 @use "../../styles.scss";
 
+.img-social {
+    @include styles.flex-column;
+    align-items: center;
 
-.social-links {
-    font-size: 0;
+    img {
+        width: 100%;
+        max-width: 250px;
+        border-radius: 10px;
+    }
+
+    .social-links {
+        font-size: 0;
+        @include styles.flex-row;
+        gap: 5px;
+        margin-top: -20px;
+        position: relative;
+        z-index:1;
+
+        &:after {
+            content: '';
+            position: absolute;
+            background-color: styles.$lemon;
+            width: 250px;
+            padding: 20px;
+            right: -30px;
+            top: -7px;
+            height: 20px;
+            z-index: -1;
+            border-radius: 10px;
+        }
+    
+        a {
+            display:block;
+            width: fit-content;
+            padding: 10px;
+            border-radius: 25px;
+            background-color: styles.$eggplant;
+    
+            .svg-icon {
+                stroke: styles.$white;
+            }
+        }
+    }
 }
+
+@media screen and (min-width: 680px) {
+    .home-flex {
+        @include styles.flex-row;
+        gap: 15px;
+
+        .img-social {
+            flex-shrink: 0;
+        }
+    }
+}
+
+

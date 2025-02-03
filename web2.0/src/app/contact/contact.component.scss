@@ -1,18 +1,51 @@
 @use "../../styles.scss";
 
-.contact-form {
-    @include styles.flex-column;
-}
-
-.contact-form label {
+.contact-form, label {
     @include styles.flex-column;
 }
 
 .contact-form {
-    width: 75%;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 597px;
+    gap: 10px;
+    align-self: center;
 
-    .contact-details {
-        width: 35%;
+
+    label {
+        font-size: 18px;
+
+        &:hover, &focus {
+            
+        }
+
+        input, textarea {
+            font-family: styles.$nunito;
+            border: 2px solid styles.$grass-green;
+            border-radius: 5px;
+            padding:5px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 170px;
+            resize: none;
+        }
+    }
+
+    .button {
+        width: fit-content;
+        padding: 10px 25px;
+        border-radius: 5px;
+        background-color: styles.$grass-green;
+        font-size: 16px;
+        font-weight: 600;
+        align-self: flex-end;
+    }
+    
+}
+
+@media screen and (min-width: 800px) {
+    .contact-form {
+
     }
 }

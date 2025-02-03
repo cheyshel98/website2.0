@@ -1,17 +1,26 @@
 <div class="container">
-    <div class="img-social">
-        <div class="social-links">
-            <a href="{{link.url}}" target="_blank" *ngFor="let link of socialLinks">
-                <svg class="svg-icon" width="25" height="25">
-                    <title>{{link.name}}</title>
-                    <use [attr.href]="'/assets/images/symbol-defs.svg#icon-' + link.img"></use>
-                </svg>
-                {{ link.name }}
-            </a>
+    <h1>Hello and Welcome!</h1>
+    <div class="home-flex">   
+        <div class="img-social">
+            <img src="/assets/images/red_shirt_old_house_sm.jpg" alt="Picture of Cheyenne" />
+            <div class="social-links">
+                <a href="{{link.url}}" title="{{link.name}}" target="_blank" *ngFor="let link of socialLinks">
+                    <svg class="svg-icon" width="25" height="25">
+                        <title>{{link.name}}</title>
+                        <use [attr.href]="'/assets/images/symbol-defs.svg#icon-' + link.img"></use>
+                    </svg>
+                    {{ link.name }}
+                </a>
+            </div>
         </div>
+        <div class="home-text">
+            <p>
+                My name is Cheyenne Shelton and I am a Front End Web Developer based in Little Rock, Arkansas seeking a full time professional role. I am passionate about web accessbility, providing mobile friendly sites, and working with modern technologies to accomplish this.
+            </p>
+            <p>
+                Take a look around to view past projects and peek at my experience.
+            </p>
+        </div>
+        
     </div>
-    <h2>Hello!</h2>
-    <p>
-        My name is Cheyenne Shelton and I am a Front End Web Developer based in Little Rock, Arkansas seeking a full time professional role. I am passionate about web accessbility, providing mobile friendly sites (fill later)
-    </p>
 </div>

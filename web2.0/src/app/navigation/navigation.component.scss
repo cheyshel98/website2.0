@@ -18,9 +18,10 @@ header {
         gap: 15px;
     }
 
-    h1 {
+    .nav-name {
         margin: 0;
         font-family: styles.$dmserif;
+        font-size: 35px;
     }
 
     .nav-group nav ul{

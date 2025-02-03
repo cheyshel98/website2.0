@@ -86,7 +86,7 @@ main.main {
     min-height: calc(100vh - ($headerHeight + $footerHeight));
 }
 
-h2, h3 {
+h1, h2 {
     font-family: $dmserif;
 }
 
@@ -95,7 +95,7 @@ p, a, button {
 }
 
 article {
-    h3 {
+    h2 {
         margin-bottom: 20px;
     }
 }
@@ -131,11 +131,11 @@ a, button {
     -webkit-box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.15);
     -moz-box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.15);
 
-    h2 {
+    h1 {
         font-size: 32px;
     }
 
-    h3 {
+    h2 {
         font-size: 24px;
         font-style: italic;
         display: block;
@@ -172,6 +172,29 @@ a, button {
             @include flex-center;
             gap: 5px;
             font-size: 18px;
+        }
+    }
+
+    section {
+        .figure-group {
+            @include flex-column;
+            gap: 20px;
+            padding: 25px;
+            background-color: $cream;
+            border-radius: $radiusSm;
+
+            figcaption {
+                font-weight: 600;
+            }
+
+            ul {
+                padding-left: 15px;
+            }
+            
+        }
+
+        ol {
+            padding: 15px 25px 30px 25px;
         }
     }
 

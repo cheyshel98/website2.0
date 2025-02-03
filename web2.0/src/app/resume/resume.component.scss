@@ -26,6 +26,7 @@
     .subtitle {
         @include styles.flex-row;
         justify-content: space-between;
+        border-bottom: 2px dotted styles.$midnight;
     }
 
     ul {
@@ -61,7 +62,7 @@
                              "exp exp"
                              "exp exp";
     
-        h2 {
+        h1 {
             grid-area: head;
         }
 
@@ -83,15 +84,32 @@
                     border-radius: 10px 10px 10px 0px;
                 }
 
+                &:last-of-type {
+                    position: relative;
+                    border-bottom: none;
+                    padding-bottom: 0px;
+
+                    .card:before {
+                        content: '';
+                        position:absolute;
+                        left: -25px;
+                        top: 0;
+                        width:30px;
+                        height: 100%;
+                        background-color: styles.$cream;
+                    }
+                }
+
                 .card {
                     @include styles.flex-column;
+                    padding: 30px 20px;
                 }
             }
         }
 
         .education {
             
-            h3:before {
+            h1:before {
                 width: calc(100% + 20px);
             }
         }
