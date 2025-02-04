@@ -12,7 +12,7 @@ export class HomeComponent {
   socialLinks:any = [
     {
       name: 'LinkedIn',
-      url: 'www.linkedin.com/in/cheyenne-shelton-8063b412b',
+      url: 'https://www.linkedin.com/in/cheyenne-shelton',
       img: 'linkedin'
     },
     {

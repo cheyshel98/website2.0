@@ -1,8 +1,6 @@
 @use "../../styles.scss";
 
 header {
-
-
     @include styles.flex-column;
     @include styles.flex-end-center;
     padding: 20px 20px 15px 20px;
@@ -11,6 +9,18 @@ header {
     background-color: styles.$header-background;
     font-family: styles.$nunito;
     color: styles.$text;
+    position: relative;
+
+    .header-wave {
+        display: none;
+        color: styles.$header-background;
+        width: 100vw;
+        height: 50vh;
+        position: absolute;
+        background-repeat: repeat-x;
+        z-index:-1;
+        top:0;
+    }
 
     .nav-group {
         @include styles.flex-column;
@@ -59,8 +69,18 @@ header {
             max-width: calc(styles.$containerWidth - 25px);
         }
 
+        .header-wave {
+            display:block;
+        }
+
         &:after {
+            border: unset;
+            width: 100vw;
+            height:300px;
             top: styles.$headerAfterHeight;
+            background-image: url(/assets/images/wave-tile.svg);
+            background-repeat: repeat-x;
+            color: styles.$header-background;
         }
     }
 }

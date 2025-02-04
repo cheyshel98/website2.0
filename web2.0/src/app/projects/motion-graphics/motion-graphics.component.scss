@@ -1,0 +1,16 @@
+.motion-vid {
+    overflow: hidden;
+    height:350px;
+    max-height: 400px;
+    margin: 0 auto;
+    position: relative;
+
+    iframe {
+        border: 0;
+        height: 100%;
+        width: 100%;
+        position:absolute;
+        top: 0;
+        left: 0;
+    }
+}

@@ -1,7 +1,12 @@
 @use "../../styles.scss";
 
-.img-social {
+.home-flex, .img-social {
     @include styles.flex-column;
+    gap: 15px;
+}
+
+
+.img-social {
     align-items: center;
 
     img {
@@ -14,22 +19,23 @@
         font-size: 0;
         @include styles.flex-row;
         gap: 5px;
-        margin-top: -20px;
-        position: relative;
-        z-index:1;
+        margin-top: -55px;
+        background-color: styles.$lemon;
+        padding: 15px 20px;
+        border-radius: 20px;
 
-        &:after {
-            content: '';
-            position: absolute;
-            background-color: styles.$lemon;
-            width: 250px;
-            padding: 20px;
-            right: -30px;
-            top: -7px;
-            height: 20px;
-            z-index: -1;
-            border-radius: 10px;
-        }
+        // &:after {
+        //     content: '';
+        //     position: absolute;
+        //     background-color: styles.$lemon;
+        //     width: 250px;
+        //     padding: 20px;
+        //     right: -30px;
+        //     top: -7px;
+        //     height: 20px;
+        //     z-index: -1;
+        //     border-radius: 10px;
+        // }
     
         a {
             display:block;
@@ -48,10 +54,16 @@
 @media screen and (min-width: 680px) {
     .home-flex {
         @include styles.flex-row;
-        gap: 15px;
+        width: 100%;
+        max-width: 700px;
+        align-self: center;
 
         .img-social {
             flex-shrink: 0;
+        }
+
+        .home-text {
+            margin-top: 30px;
         }
     }
 }
