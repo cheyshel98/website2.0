@@ -22,10 +22,10 @@ export class NavigationComponent {
       name: 'Resume',
       url: 'resume'
     },
-    {
-      name: 'Contact',
-      url: 'contact'
-    }
+    // {
+    //   name: 'Contact',
+    //   url: 'contact'
+    // }
   ];
   test:any = 'test'
 }

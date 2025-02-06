@@ -20,7 +20,7 @@
         @include styles.flex-row;
         gap: 5px;
         margin-top: -55px;
-        background-color: styles.$heading-highlight;
+        background-color: styles.$project-btn;
         padding: 15px 20px;
         border-radius: 20px;
 
@@ -40,17 +40,23 @@
         a {
             display:block;
             width: fit-content;
-            padding: 10px;
-            border-radius: 25px;
+            padding: 15px;
+            border-radius: 50px;
     
             .svg-icon {
-                stroke: styles.$white;
+                stroke: styles.$black;
             }
 
             &:hover, &:focus {
-                background-color: styles.$accent-border;
+                background-color: styles.$project-btn-effect;
             }
         }
+    }
+}
+
+.home-text {
+    p:first-of-type {
+        margin-bottom: 15px;
     }
 }
 
@@ -64,10 +70,12 @@
         .img-social {
             flex-shrink: 0;
         }
+    }
+}
 
-        .home-text {
-            margin-top: 30px;
-        }
+@media screen and (min-width: 800px) {
+    .home-text {
+        margin-top: 30px;
     }
 }
 

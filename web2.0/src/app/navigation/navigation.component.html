@@ -4,7 +4,7 @@
         <nav>
             <ul>
                 <li *ngFor="let link of links">
-                    <a routerLink="/{{link.url}}" >{{link.name}}</a>
+                    <a class="block-link" [routerLinkActive]="['is-active']" routerLink="/{{link.url}}" >{{link.name}}</a>
                 </li>
             </ul>
         </nav>

@@ -10,10 +10,11 @@
 .card {
     flex-grow: 1;
     background-color: styles.$card-bg;//styles.$cream;
-    border: 2px solid styles.$accent-border;
+    border: 2px solid styles.$card-border;
     padding: 20px;
     border-radius: 10px;
     color: styles.$card-text;
+    width: 100%;
 
     &:first-of-type {
         margin-top: -25px;
@@ -28,7 +29,7 @@
     .subtitle {
         @include styles.flex-row;
         justify-content: space-between;
-        border-bottom: 2px dotted styles.$accent-border;
+        border-bottom: 2px dotted styles.$card-text;
     }
 
     ul {
@@ -103,8 +104,8 @@
                         width:30px;
                         height: 100%;
                         background-color: styles.$card-bg;//styles.$cream;
-                        border-top: 2px solid styles.$accent-border;
-                        border-bottom: 2px solid styles.$accent-border;
+                        border-top: 2px solid styles.$card-border;
+                        border-bottom: 2px solid styles.$card-border;
                     }
                 }
 

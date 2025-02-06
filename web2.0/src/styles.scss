@@ -17,23 +17,6 @@ $containerWidth: 1050px;
 //Common Colors
 $white: #fff;
 $black: #000;
-
-//Header Colors
-$header-background: #E07A5F;
-
-//Daylight Colors
-// $pumpkin: #e08152; //#e07A5F;
-// $orange-crayon: #E57A44;
-// $cream: #F4F1DE;
-// $midnight: #4F6D7A;//#283845;
-// $tiffany-blue: #9AD2CB;
-// $grass-green: #81B29A;
-// $light-green: #D7EBBA;
-// $lemon: #F2CC8F;
-// $dark-lemon: #e0ae5c;
-// $eggplant: #472836;
-// $text: $black;
-
 $light-orange: #DDA15E;
 $dark-orange: #BC6C25;
 $lightest-green: #DBE0CC;
@@ -43,10 +26,15 @@ $cream: #F4F1DE;
 $yellow: #EAD79F;
 $lemon: #F2CC8F;
 $dark-lemon: #e0ae5c;
+$light-blue: #d4ebe9;
+$dark-blue: #181F36;
 
 //daylight colors
 $header-bg: $dark-orange;
 $header-text: $white;
+
+$block-link: $dark-orange;
+$block-link-hover: $light-orange;
 
 $main-bg: $cream;
 
@@ -60,18 +48,26 @@ $container-border: $light-green;
 $heading-highlight: $light-green;
 $heading-hightlight-text: $white;
 
-$button-bg: $light-green;
-$button-text: $white;
-$button-hover: $dark-green;
+$button-bg: $lemon;
+$button-text: $black;
+$button-hover: $dark-lemon;
+$button-border: $dark-lemon;
 
 $project-btn: $dark-lemon;
 $project-btn-effect: $yellow;
 $project-btn-text: $black;
 
-$card-bg: $lightest-green;
+$card-bg: $light-blue;
 $card-text: $black;
-$card-border: $light-green;
+$card-border: $dark-blue;
+
+$content-callout: $light-blue;
+
+$contact-accent: $light-green;
 $accent-border: $dark-green;
+
+$inline-link: $light-orange;
+$inline-link-vis: $dark-orange;
 
 
 //Mixins
@@ -146,11 +142,68 @@ a, button {
     cursor: pointer;
     background: none;
     border: none;
+
+    &:focus:not(.inline-link):not(.back-link) {
+        outline: none;
+    }
 }
 
 .svg-icon {
     fill: none;
     stroke: $accent-border;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.inline-link {
+    border-bottom: 3px solid $inline-link;
+    position: relative;
+    padding: 2px 4px 0 4px;
+    z-index: 1;
+
+    // &:after, &:visited:after {
+    //     content: '';
+    //     display: block;
+    //     position: absolute;
+    //     width: calc(100%);
+    //     bottom: 0;
+    //     left:0;
+    //     background-color: $inline-link;
+    //     height: 0px;
+    //     z-index: -1;
+    // }
+
+    &:visited {
+        border-color: $inline-link-vis;
+
+        &:hover:after, &:focus:after {
+            background-color: $inline-link-vis
+        }
+    }
+
+    // &:hover:after, &:focus:after {
+    //     content: '';
+    //     height: 100%;
+    //     transition: height ease-in-out .2s;
+    // }
+}
+
+.block-link {
+    border-bottom: 3px solid $block-link;
+
+    &:hover, &:focus, &.is-active {
+        border-color: $block-link-hover;
+    }
+}
+
+.content-callout {
+    display: block;
+    height: fit-content;
+    background-color: $content-callout;
+    border-radius: $radiusMd;
+    padding: 10px;
 }
 
 //generic container styling
@@ -226,7 +279,7 @@ a, button {
             @include flex-column;
             gap: 20px;
             padding: 25px;
-            background-color: $card-bg;
+            background-color: $content-callout;
             border-radius: $radiusSm;
 
             figcaption {
@@ -239,8 +292,14 @@ a, button {
             
         }
 
+        q {
+            display:block;
+            margin-bottom: 15px;
+            padding: 20px;
+        }
+
         ol {
-            padding: 15px 25px 30px 25px;
+            padding: 15px 25px 30px 40px;
         }
     }
 
