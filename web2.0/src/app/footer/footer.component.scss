@@ -1,9 +1,9 @@
-@use "../../styles.scss";
+@use "../shared/recipes.scss";
 
 footer {
     width: 100%;
-    background-color: styles.$footer-bg;
-    height: styles.$footerHeight;
+    background-color: recipes.$footer-bg;
+    height: recipes.$footerHeight;
     position: absolute;
     bottom: 0;
 }

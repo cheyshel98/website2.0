@@ -1,16 +1,10 @@
-@use "../../styles.scss";
-
-// .container {
-//     @include styles.flex-column;
-//     gap: 20px;
-// }
+@use "../shared/recipes.scss";
 
 .projects {
-    @include styles.flex-column;
-
+    @include recipes.flex-column;
     .project-links {
-        @include styles.flex-row;
-        @include styles.flex-center;
+        @include recipes.flex-row;
+        @include recipes.flex-center;
         flex-wrap: wrap;
         max-width: 430px;
         gap: 15px 20px;
@@ -19,15 +13,15 @@
         padding-bottom: 20px;
 
         a {
-            @include styles.flex-column;
-            @include styles.flex-center;
+            @include recipes.flex-column;
+            @include recipes.flex-center;
             position: relative;
             height: 110px;
             width: 200px;
             border: none;
-            border-radius: styles.$radiusSm;
-            background-color: styles.$project-btn;
-            color: styles.$project-btn-text;
+            border-radius: recipes.$radiusSm;
+            background-color: recipes.$project-btn;
+            color: recipes.$project-btn-text;
             font-size: 18px;
             font-weight: 600;
             overflow:hidden;
@@ -42,7 +36,7 @@
                 height: 130px;
                 top: -11px;
                 transform: rotate(10deg);
-                background-color: styles.$project-btn-effect;
+                background-color: recipes.$project-btn-effect;
             }
 
             &:before {
@@ -57,8 +51,8 @@
             }
         
             &:hover, &:focus { /* gold shine animation effect */
-                background-color: styles.$project-btn;
-                border: solid 3px darken(styles.$project-btn, 30%);
+                background-color: recipes.$project-btn;
+                border: solid 3px darken(recipes.$project-btn, 30%);
                 &:before {
                     transition: left 1s;
                     left: 270px;

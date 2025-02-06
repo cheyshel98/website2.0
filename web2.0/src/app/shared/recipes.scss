@@ -1,0 +1,92 @@
+//Fonts
+$nunito: "Nunito", sans-serif;
+$dmserif: "DM Serif Display", serif;
+
+//Common Style
+$radiusSm: 5px;
+$radiusMd: 15px;
+$radiusLg: 45px;
+$headerHeight: 125px;
+$headerAfterHeight: calc($headerHeight * .8);
+$footerHeight: 85px;
+$mainMarginBottom: 125px;
+$containerWidth: 1050px;
+
+//Common Colors
+$white: #fff;
+$black: #000;
+$light-orange: #DDA15E;
+$dark-orange: #BC6C25;
+$lightest-green: #DBE0CC;
+$light-green: #606C38;
+$dark-green: #283618;
+$cream: #F4F1DE;
+$yellow: #EAD79F;
+$lemon: #F2CC8F;
+$dark-lemon: #e0ae5c;
+$light-blue: #d4ebe9;
+$dark-blue: #181F36;
+
+//daylight colors
+$header-bg: $dark-orange;
+$header-text: $white;
+
+$block-link: $dark-orange;
+$block-link-hover: $light-orange;
+
+$main-bg: $cream;
+
+$footer-bg: $dark-green;
+$footer-text: $white;
+
+$container-bg: $white;
+$container-text: $black;
+$container-border: $light-green;
+
+$heading-highlight: $light-green;
+$heading-hightlight-text: $white;
+
+$button-bg: $lemon;
+$button-text: $black;
+$button-hover: $dark-lemon;
+$button-border: $dark-lemon;
+
+$project-btn: $dark-lemon;
+$project-btn-effect: $yellow;
+$project-btn-text: $black;
+
+$card-bg: $light-blue;
+$card-text: $black;
+$card-border: $dark-blue;
+
+$content-callout: $light-blue;
+
+$contact-accent: $light-green;
+$accent-border: $dark-green;
+
+$inline-link: $light-orange;
+$inline-link-vis: $dark-orange;
+
+//Mixins
+
+@mixin flex-row {
+    display: flex;
+    flex-flow: row;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-flow: column;
+}
+
+@mixin flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-end-center {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+//Mixins End

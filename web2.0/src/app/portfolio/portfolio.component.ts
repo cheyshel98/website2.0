@@ -27,5 +27,5 @@ export class PortfolioComponent {
       url: 'portfolio/motion-graphics'
     }
   ]
-
 }
+

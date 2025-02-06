@@ -1,19 +1,19 @@
-@use "../../styles.scss";
+@use "../shared/recipes.scss";
 
 header {
-    @include styles.flex-column;
-    @include styles.flex-end-center;
+    @include recipes.flex-column;
+    @include recipes.flex-end-center;
     padding: 20px 20px 0px 20px;
     gap: 10px;
-    height: styles.$headerHeight;
-    background-color: styles.$header-bg;
-    font-family: styles.$nunito;
-    color: styles.$header-text;
+    height: recipes.$headerHeight;
+    background-color: recipes.$header-bg;
+    font-family: recipes.$nunito;
+    color: recipes.$header-text;
     position: relative;
 
     .header-wave {
         display: none;
-        color: styles.$header-bg;
+        color: recipes.$header-bg;
         width: 100vw;
         height: 50vh;
         position: absolute;
@@ -23,14 +23,14 @@ header {
     }
 
     .nav-group {
-        @include styles.flex-column;
-        @include styles.flex-center;
+        @include recipes.flex-column;
+        @include recipes.flex-center;
         gap: 15px;
     }
 
     .nav-name {
         margin: 0;
-        font-family: styles.$dmserif;
+        font-family: recipes.$dmserif;
         font-size: 35px;
     }
 
@@ -49,16 +49,16 @@ header {
     &:after {
         content: '';
         position: absolute;
-        top: styles.$headerHeight;
+        top: recipes.$headerHeight;
         z-index: -3;
-        border-top: 250px solid styles.$header-bg;
+        border-top: 250px solid recipes.$header-bg;
         border-right: 100vw solid transparent;
     }
 }
 
 @media screen and (min-width: 800px) {
     header {
-        height: styles.$headerAfterHeight;
+        height: recipes.$headerAfterHeight;
 
         .nav-group {
             flex-flow: row-reverse;
@@ -66,7 +66,7 @@ header {
             align-items: center;
 
             width: 85%;
-            max-width: calc(styles.$containerWidth - 25px);
+            max-width: calc(recipes.$containerWidth - 25px);
         }
 
         .header-wave {
@@ -77,10 +77,10 @@ header {
             border: unset;
             width: 100vw;
             height:300px;
-            top: calc(styles.$headerAfterHeight - 1px);
+            top: calc(recipes.$headerAfterHeight - 1px);
             background-image: url(/assets/images/wave-tile.svg);
             background-repeat: repeat-x;
-            color: styles.$header-bg;
+            color: recipes.$header-bg;
         }
     }
 }

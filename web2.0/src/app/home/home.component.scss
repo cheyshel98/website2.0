@@ -1,7 +1,7 @@
-@use "../../styles.scss";
+@use "../shared/recipes.scss";
 
 .home-flex, .img-social {
-    @include styles.flex-column;
+    @include recipes.flex-column;
     gap: 15px;
 }
 
@@ -17,17 +17,17 @@
 
     .social-links {
         font-size: 0;
-        @include styles.flex-row;
+        @include recipes.flex-row;
         gap: 5px;
         margin-top: -55px;
-        background-color: styles.$project-btn;
+        background-color: recipes.$project-btn;
         padding: 15px 20px;
         border-radius: 20px;
 
         // &:after {
         //     content: '';
         //     position: absolute;
-        //     background-color: styles.$lemon;
+        //     background-color: recipes.$lemon;
         //     width: 250px;
         //     padding: 20px;
         //     right: -30px;
@@ -44,11 +44,11 @@
             border-radius: 50px;
     
             .svg-icon {
-                stroke: styles.$black;
+                stroke: recipes.$black;
             }
 
             &:hover, &:focus {
-                background-color: styles.$project-btn-effect;
+                background-color: recipes.$project-btn-effect;
             }
         }
     }
@@ -62,7 +62,7 @@
 
 @media screen and (min-width: 680px) {
     .home-flex {
-        @include styles.flex-row;
+        @include recipes.flex-row;
         width: 100%;
         max-width: 700px;
         align-self: center;

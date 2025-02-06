@@ -1,98 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-
-//Fonts
-$nunito: "Nunito", sans-serif;
-$dmserif: "DM Serif Display", serif;
-
-//Common Style
-$radiusSm: 5px;
-$radiusMd: 15px;
-$radiusLg: 45px;
-$headerHeight: 125px;
-$headerAfterHeight: calc($headerHeight * .8);
-$footerHeight: 85px;
-$mainMarginBottom: 125px;
-$containerWidth: 1050px;
-
-//Common Colors
-$white: #fff;
-$black: #000;
-$light-orange: #DDA15E;
-$dark-orange: #BC6C25;
-$lightest-green: #DBE0CC;
-$light-green: #606C38;
-$dark-green: #283618;
-$cream: #F4F1DE;
-$yellow: #EAD79F;
-$lemon: #F2CC8F;
-$dark-lemon: #e0ae5c;
-$light-blue: #d4ebe9;
-$dark-blue: #181F36;
-
-//daylight colors
-$header-bg: $dark-orange;
-$header-text: $white;
-
-$block-link: $dark-orange;
-$block-link-hover: $light-orange;
-
-$main-bg: $cream;
-
-$footer-bg: $dark-green;
-$footer-text: $white;
-
-$container-bg: $white;
-$container-text: $black;
-$container-border: $light-green;
-
-$heading-highlight: $light-green;
-$heading-hightlight-text: $white;
-
-$button-bg: $lemon;
-$button-text: $black;
-$button-hover: $dark-lemon;
-$button-border: $dark-lemon;
-
-$project-btn: $dark-lemon;
-$project-btn-effect: $yellow;
-$project-btn-text: $black;
-
-$card-bg: $light-blue;
-$card-text: $black;
-$card-border: $dark-blue;
-
-$content-callout: $light-blue;
-
-$contact-accent: $light-green;
-$accent-border: $dark-green;
-
-$inline-link: $light-orange;
-$inline-link-vis: $dark-orange;
-
-
-//Mixins
-
-@mixin flex-row {
-    display: flex;
-    flex-flow: row;
-}
-
-@mixin flex-column {
-    display: flex;
-    flex-flow: column;
-}
-
-@mixin flex-center {
-    justify-content: center;
-    align-items: center;
-}
-
-@mixin flex-end-center {
-    justify-content: flex-end;
-    align-items: center;
-}
-
-//Mixins End
+@use "app/shared/recipes.scss";
 
 * {
     margin: 0px;
@@ -105,12 +11,12 @@ html {
     min-height: 100vh;
     width: 100vw;
     position: relative;
-    font-family: $nunito;
+    font-family: recipes.$nunito;
 }
 
 body {
-    @include flex-column;
-    background-color: $main-bg;
+    @include recipes.flex-column;
+    background-color: recipes.$main-bg;
 }
 
 .rm-scroll {
@@ -119,15 +25,15 @@ body {
 }
 
 main.main {
-    min-height: calc(100vh - ($headerHeight + $footerHeight));
+    min-height: calc(100vh - (recipes.$headerHeight + recipes.$footerHeight));
 }
 
 h1, h2 {
-    font-family: $dmserif;
+    font-family: recipes.$dmserif;
 }
 
 p, a, button {
-    font-family: $nunito;
+    font-family: recipes.$nunito;
 }
 
 article {
@@ -150,7 +56,7 @@ a, button {
 
 .svg-icon {
     fill: none;
-    stroke: $accent-border;
+    stroke: recipes.$accent-border;
 }
 
 .italic {
@@ -158,7 +64,7 @@ a, button {
 }
 
 .inline-link {
-    border-bottom: 3px solid $inline-link;
+    border-bottom: 3px solid recipes.$inline-link;
     position: relative;
     padding: 2px 4px 0 4px;
     z-index: 1;
@@ -170,16 +76,16 @@ a, button {
     //     width: calc(100%);
     //     bottom: 0;
     //     left:0;
-    //     background-color: $inline-link;
+    //     background-color: recipes.$inline-link;
     //     height: 0px;
     //     z-index: -1;
     // }
 
     &:visited {
-        border-color: $inline-link-vis;
+        border-color: recipes.$inline-link-vis;
 
         &:hover:after, &:focus:after {
-            background-color: $inline-link-vis
+            background-color: recipes.$inline-link-vis
         }
     }
 
@@ -191,34 +97,34 @@ a, button {
 }
 
 .block-link {
-    border-bottom: 3px solid $block-link;
+    border-bottom: 3px solid recipes.$block-link;
 
     &:hover, &:focus, &.is-active {
-        border-color: $block-link-hover;
+        border-color: recipes.$block-link-hover;
     }
 }
 
 .content-callout {
     display: block;
     height: fit-content;
-    background-color: $content-callout;
-    border-radius: $radiusMd;
+    background-color: recipes.$content-callout;
+    border-radius: recipes.$radiusMd;
     padding: 10px;
 }
 
 //generic container styling
 
 .container {
-    @include flex-column;
+    @include recipes.flex-column;
     gap: 20px;
     padding: 40px 40px;
     width: 85%;
-    max-width: $containerWidth;
-    margin: 30px auto $mainMarginBottom auto;
-    background-color: $container-bg;
-    color: $container-text;
-    border: solid 3px $container-border;
-    border-radius: $radiusLg;
+    max-width: recipes.$containerWidth;
+    margin: 30px auto recipes.$mainMarginBottom auto;
+    background-color: recipes.$container-bg;
+    color: recipes.$container-text;
+    border: solid 3px recipes.$container-border;
+    border-radius: recipes.$radiusLg;
     min-height: max-content;
     box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.15);
     -webkit-box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.15);
@@ -235,11 +141,11 @@ a, button {
         position: relative;
         width: fit-content;
         z-index: 2;
-        color: $heading-hightlight-text;
+        color: recipes.$heading-hightlight-text;
     
         &:before {
             content: '';
-            background-color: $heading-highlight;
+            background-color: recipes.$heading-highlight;
             position: absolute;
             width: calc(100% + 66px);
             height: calc(100% + 8px);
@@ -261,14 +167,14 @@ a, button {
 .project { //generic styles for portfolio project pages
 
     .cont-header {
-        @include flex-column;
+        @include recipes.flex-column;
         flex-flow: column-reverse;
         justify-content: space-between;
         align-items: flex-start;
 
         .back-link {
-            @include flex-row;
-            @include flex-center;
+            @include recipes.flex-row;
+            @include recipes.flex-center;
             gap: 5px;
             font-size: 18px;
         }
@@ -276,11 +182,11 @@ a, button {
 
     section {
         .figure-group {
-            @include flex-column;
+            @include recipes.flex-column;
             gap: 20px;
             padding: 25px;
-            background-color: $content-callout;
-            border-radius: $radiusSm;
+            background-color: recipes.$content-callout;
+            border-radius: recipes.$radiusSm;
 
             figcaption {
                 font-weight: 600;
@@ -306,7 +212,7 @@ a, button {
     section:not(:last-child) {
         margin-bottom: 10px;
         padding-bottom: 25px;
-        border-bottom: 5px solid $accent-border;
+        border-bottom: 5px solid recipes.$accent-border;
         border-bottom-style: double;
     }
 
@@ -319,7 +225,7 @@ a, button {
     }
 
     .img-by-side { //for two picture layout
-        @include flex-column;
+        @include recipes.flex-column;
         gap: 10px;
     }
 
@@ -336,7 +242,7 @@ a, button {
         }
 
         .img-by-side { //two picture layout on desktop
-            @include flex-row;
+            @include recipes.flex-row;
             align-items: center;
             width: 60%;
             margin: 0 auto;

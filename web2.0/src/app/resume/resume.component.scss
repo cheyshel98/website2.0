@@ -1,19 +1,18 @@
-@use "../../styles.scss";
-
+@use "../shared/recipes.scss";
 
 .card-set {
-    @include styles.flex-column;
-    @include styles.flex-center;
+    @include recipes.flex-column;
+    @include recipes.flex-center;
     gap: 25px;   
 }
 
 .card {
     flex-grow: 1;
-    background-color: styles.$card-bg;//styles.$cream;
-    border: 2px solid styles.$card-border;
+    background-color: recipes.$card-bg;
+    border: 2px solid recipes.$card-border;
     padding: 20px;
     border-radius: 10px;
-    color: styles.$card-text;
+    color: recipes.$card-text;
     width: 100%;
 
     &:first-of-type {
@@ -27,9 +26,9 @@
     }
 
     .subtitle {
-        @include styles.flex-row;
+        @include recipes.flex-row;
         justify-content: space-between;
-        border-bottom: 2px dotted styles.$card-text;
+        border-bottom: 2px dotted recipes.$card-text;
     }
 
     ul {
@@ -38,7 +37,7 @@
 }
 
 .skills-edu {
-    @include styles.flex-row;
+    @include recipes.flex-row;
     flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 10px;
@@ -47,7 +46,7 @@
         width: 100%;
 
         &:last-of-type {
-            border-bottom: 5px double styles.$accent-border;
+            border-bottom: 5px double recipes.$accent-border;
             padding-bottom: 25px;
         }
     }   
@@ -64,18 +63,15 @@
                              "skedu skedu"
                              "exp exp"
                              "exp exp";
-    
         h1 {
             grid-area: head;
         }
-
         .skills-edu {
             grid-area: skedu;
-            border-bottom: 5px double styles.$accent-border;
+            border-bottom: 5px double recipes.$accent-border;
             padding-bottom: 15px;
-
             section {
-                @include styles.flex-column;
+                @include recipes.flex-column;
                 flex: 1;
                 align-self: stretch;
                 
@@ -103,26 +99,23 @@
                         top: -2px;
                         width:30px;
                         height: 100%;
-                        background-color: styles.$card-bg;//styles.$cream;
-                        border-top: 2px solid styles.$card-border;
-                        border-bottom: 2px solid styles.$card-border;
+                        background-color: recipes.$card-bg;
+                        border-top: 2px solid recipes.$card-border;
+                        border-bottom: 2px solid recipes.$card-border;
                     }
                 }
 
                 .card {
-                    @include styles.flex-column;
+                    @include recipes.flex-column;
                     padding: 30px 20px;
                 }
             }
         }
-
         .education {
-            
             h1:before {
                 width: calc(100% + 20px);
             }
         }
-    
         .experience {
             grid-area: exp;
 
@@ -133,15 +126,10 @@
 
 @media screen and (min-width: 1100px) {
         .card-set {
-            @include styles.flex-row;
+            @include recipes.flex-row;
             flex-wrap: wrap;
         }
-
     .container {
-        .skills-edu {
-
-        }
-
         .experience {
             .card-set {
                 margin-top: -25px;
@@ -150,7 +138,6 @@
                     width: calc(45% - 25px);
                     align-self: stretch;
                     
-        
                     &:first-of-type {
                         margin-top: unset;
                     }

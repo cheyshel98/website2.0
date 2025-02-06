@@ -1,7 +1,7 @@
-@use "../../styles.scss";
+@use "../shared/recipes.scss";
 
 .contact-form, label {
-    @include styles.flex-column;
+    @include recipes.flex-column;
 }
 
 .contact-form {
@@ -14,13 +14,9 @@
     label {
         font-size: 18px;
 
-        &:hover, &focus {
-            
-        }
-
         input, textarea {
-            font-family: styles.$nunito;
-            border: 2px solid styles.$contact-accent;
+            font-family: recipes.$nunito;
+            border: 2px solid recipes.$contact-accent;
             border-radius: 5px;
             padding:5px;
             font-size: 16px;
@@ -36,23 +32,17 @@
         width: fit-content;
         padding: 8px 22px;
         border-radius: 5px;
-        background-color: styles.$button-bg;
-        color: styles.$button-text;
-        border: 3px solid styles.$dark-lemon;
+        background-color: recipes.$button-bg;
+        color: recipes.$button-text;
+        border: 3px solid recipes.$dark-lemon;
         font-size: 16px;
         font-weight: 600;
         align-self: flex-end;
 
         &:hover, &:focus {
-            background-color: styles.$button-hover;
+            background-color: recipes.$button-hover;
 
         }
     }
     
-}
-
-@media screen and (min-width: 800px) {
-    .contact-form {
-
-    }
 }
