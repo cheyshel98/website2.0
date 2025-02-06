@@ -9,9 +9,11 @@
 
 .card {
     flex-grow: 1;
-    background-color: styles.$cream;
+    background-color: styles.$card-bg;//styles.$cream;
+    border: 2px solid styles.$accent-border;
     padding: 20px;
     border-radius: 10px;
+    color: styles.$card-text;
 
     &:first-of-type {
         margin-top: -25px;
@@ -26,7 +28,7 @@
     .subtitle {
         @include styles.flex-row;
         justify-content: space-between;
-        border-bottom: 2px dotted styles.$midnight;
+        border-bottom: 2px dotted styles.$accent-border;
     }
 
     ul {
@@ -44,7 +46,7 @@
         width: 100%;
 
         &:last-of-type {
-            border-bottom: 5px double styles.$midnight;
+            border-bottom: 5px double styles.$accent-border;
             padding-bottom: 25px;
         }
     }   
@@ -68,7 +70,7 @@
 
         .skills-edu {
             grid-area: skedu;
-            border-bottom: 5px double styles.$midnight;
+            border-bottom: 5px double styles.$accent-border;
             padding-bottom: 15px;
 
             section {
@@ -77,11 +79,11 @@
                 align-self: stretch;
                 
                 &:first-child .card {
-                    border-radius: 10px 10px 0px 10px;
+                    border-radius: 10px 0px 0px 10px;
                 }
 
                 &:last-child .card {
-                    border-radius: 10px 10px 10px 0px;
+                    border-radius: 0px 10px 10px 0px;
                 }
 
                 &:last-of-type {
@@ -89,14 +91,20 @@
                     border-bottom: none;
                     padding-bottom: 0px;
 
+                    h2:before {
+                        width: calc(100% + 25px);
+                    }
+
                     .card:before {
                         content: '';
                         position:absolute;
                         left: -25px;
-                        top: 0;
+                        top: -2px;
                         width:30px;
                         height: 100%;
-                        background-color: styles.$cream;
+                        background-color: styles.$card-bg;//styles.$cream;
+                        border-top: 2px solid styles.$accent-border;
+                        border-bottom: 2px solid styles.$accent-border;
                     }
                 }
 

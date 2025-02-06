@@ -26,7 +26,8 @@
             width: 200px;
             border: none;
             border-radius: styles.$radiusSm;
-            background-color: styles.$grass-green;
+            background-color: styles.$project-btn;
+            color: styles.$project-btn-text;
             font-size: 18px;
             font-weight: 600;
             overflow:hidden;
@@ -41,7 +42,7 @@
                 height: 130px;
                 top: -11px;
                 transform: rotate(10deg);
-                background-color: styles.$light-green;
+                background-color: styles.$project-btn-effect;
             }
 
             &:before {
@@ -56,7 +57,8 @@
             }
         
             &:hover, &:focus { /* gold shine animation effect */
-                background-color: styles.$grass-green;
+                background-color: styles.$project-btn;
+                border: solid 3px darken(styles.$project-btn, 30%);
                 &:before {
                     transition: left 1s;
                     left: 270px;

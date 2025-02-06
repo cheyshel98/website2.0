@@ -22,17 +22,57 @@ $black: #000;
 $header-background: #E07A5F;
 
 //Daylight Colors
-$pumpkin: #e08152; //#e07A5F;
-$orange-crayon: #E57A44;
+// $pumpkin: #e08152; //#e07A5F;
+// $orange-crayon: #E57A44;
+// $cream: #F4F1DE;
+// $midnight: #4F6D7A;//#283845;
+// $tiffany-blue: #9AD2CB;
+// $grass-green: #81B29A;
+// $light-green: #D7EBBA;
+// $lemon: #F2CC8F;
+// $dark-lemon: #e0ae5c;
+// $eggplant: #472836;
+// $text: $black;
+
+$light-orange: #DDA15E;
+$dark-orange: #BC6C25;
+$lightest-green: #DBE0CC;
+$light-green: #606C38;
+$dark-green: #283618;
 $cream: #F4F1DE;
-$midnight: #4F6D7A;//#283845;
-$tiffany-blue: #9AD2CB;
-$grass-green: #81B29A;
-$light-green: #D7EBBA;
+$yellow: #EAD79F;
 $lemon: #F2CC8F;
 $dark-lemon: #e0ae5c;
-$eggplant: #472836;
-$text: $black;
+
+//daylight colors
+$header-bg: $dark-orange;
+$header-text: $white;
+
+$main-bg: $cream;
+
+$footer-bg: $dark-green;
+$footer-text: $white;
+
+$container-bg: $white;
+$container-text: $black;
+$container-border: $light-green;
+
+$heading-highlight: $light-green;
+$heading-hightlight-text: $white;
+
+$button-bg: $light-green;
+$button-text: $white;
+$button-hover: $dark-green;
+
+$project-btn: $dark-lemon;
+$project-btn-effect: $yellow;
+$project-btn-text: $black;
+
+$card-bg: $lightest-green;
+$card-text: $black;
+$card-border: $light-green;
+$accent-border: $dark-green;
+
 
 //Mixins
 
@@ -74,7 +114,7 @@ html {
 
 body {
     @include flex-column;
-    background-color: $cream;
+    background-color: $main-bg;
 }
 
 .rm-scroll {
@@ -102,7 +142,7 @@ article {
 
 a, button {
     text-decoration: none;
-    color: $text;
+    color: inherit;
     cursor: pointer;
     background: none;
     border: none;
@@ -110,7 +150,7 @@ a, button {
 
 .svg-icon {
     fill: none;
-    stroke: $eggplant;
+    stroke: $accent-border;
 }
 
 //generic container styling
@@ -122,9 +162,9 @@ a, button {
     width: 85%;
     max-width: $containerWidth;
     margin: 30px auto $mainMarginBottom auto;
-    background-color: $white;
-    color: $text;
-    border: solid 2px $midnight;
+    background-color: $container-bg;
+    color: $container-text;
+    border: solid 3px $container-border;
     border-radius: $radiusLg;
     min-height: max-content;
     box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.15);
@@ -142,10 +182,11 @@ a, button {
         position: relative;
         width: fit-content;
         z-index: 2;
+        color: $heading-hightlight-text;
     
         &:before {
             content: '';
-            background-color: $lemon;
+            background-color: $heading-highlight;
             position: absolute;
             width: calc(100% + 66px);
             height: calc(100% + 8px);
@@ -154,6 +195,11 @@ a, button {
             z-index: -1;
             border-radius: 5px 10px 10px 5px;
         }
+    }
+
+    .section-context {
+        margin-bottom: 0px;
+        font-style: italic;
     }
 
     
@@ -180,7 +226,7 @@ a, button {
             @include flex-column;
             gap: 20px;
             padding: 25px;
-            background-color: $cream;
+            background-color: $card-bg;
             border-radius: $radiusSm;
 
             figcaption {
@@ -201,7 +247,7 @@ a, button {
     section:not(:last-child) {
         margin-bottom: 10px;
         padding-bottom: 25px;
-        border-bottom: 5px solid $midnight;
+        border-bottom: 5px solid $accent-border;
         border-bottom-style: double;
     }
 

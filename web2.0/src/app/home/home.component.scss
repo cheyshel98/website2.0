@@ -20,7 +20,7 @@
         @include styles.flex-row;
         gap: 5px;
         margin-top: -55px;
-        background-color: styles.$lemon;
+        background-color: styles.$heading-highlight;
         padding: 15px 20px;
         border-radius: 20px;
 
@@ -42,10 +42,13 @@
             width: fit-content;
             padding: 10px;
             border-radius: 25px;
-            background-color: styles.$eggplant;
     
             .svg-icon {
                 stroke: styles.$white;
+            }
+
+            &:hover, &:focus {
+                background-color: styles.$accent-border;
             }
         }
     }

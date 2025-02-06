@@ -20,7 +20,7 @@
 
         input, textarea {
             font-family: styles.$nunito;
-            border: 2px solid styles.$grass-green;
+            border: 2px solid styles.$accent-border;
             border-radius: 5px;
             padding:5px;
             font-size: 16px;
@@ -36,10 +36,15 @@
         width: fit-content;
         padding: 10px 25px;
         border-radius: 5px;
-        background-color: styles.$grass-green;
+        background-color: styles.$button-bg;
+        color: styles.$button-text;
         font-size: 16px;
         font-weight: 600;
         align-self: flex-end;
+
+        &:hover {
+            background-color: styles.$button-hover;
+        }
     }
     
 }
