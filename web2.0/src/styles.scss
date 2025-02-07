@@ -99,8 +99,13 @@ a, button {
 .block-link {
     border-bottom: 3px solid recipes.$block-link;
 
-    &:hover, &:focus, &.is-active {
+    &:hover, &:focus,
+    &.is-active:hover, &.is-active:focus {
         border-color: recipes.$block-link-hover;
+    }
+
+    &.is-active{
+        border-color: recipes.$block-link-active;
     }
 }
 

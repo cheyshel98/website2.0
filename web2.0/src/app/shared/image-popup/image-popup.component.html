@@ -3,13 +3,14 @@
     <img class="img" [src]="'/assets/images/' + src" [alt]="alt">
 </a>
 
-<div class="overlay" *ngIf="popup" (click)="imgPopup(false)">
-    <button class="img-close" (click)="imgPopup(false)" *ngIf="popup" title="Close">
-        <svg class="svg-icon" width="25" height="25">
-            <use [attr.href]="'/assets/images/symbol-defs.svg#icon-x-circle'"></use>
-        </svg>
-    </button>
-    <img class="img" [src]="'/assets/images/' + src" [alt]="alt">
-    <p class="img-text" *ngIf="alt.length > 0">{{ alt }}</p>
+<div class="overlay" id="img-popup" *ngIf="popup" (keydown)="initTrapFocus($event, 'img-popup')">
+    <div class="img-group">
+        <button tabindex="0" class="img-close" (click)="imgPopup(false)" *ngIf="popup" title="Close">
+            <svg class="svg-icon" width="25" height="25">
+                <use [attr.href]="'/assets/images/symbol-defs.svg#icon-x-circle'"></use>
+            </svg>
+        </button>
+        <img class="img" [src]="'/assets/images/' + src" [alt]="alt">
+        <p class="img-text" *ngIf="alt.length > 0">{{ alt }}</p>
+    </div>
 </div>
-
