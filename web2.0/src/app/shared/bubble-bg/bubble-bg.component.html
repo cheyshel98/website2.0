@@ -1,0 +1,4 @@
+<div class="bubble-layer layer-{{i}}" *ngFor="let config of bubbleConfig; let i = index" >
+    <span class="bubble" [ngStyle]="{height: bubble.size + 'px', width: bubble.size + 'px'}"  *ngFor="let bubble of config.bubbles">{{bubble.size}}</span>
+</div>
+

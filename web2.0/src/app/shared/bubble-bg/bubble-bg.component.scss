@@ -1,0 +1,20 @@
+@use "../recipes.scss";
+
+bubble-bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+
+.bubble-layer {
+    position: relative;;
+    display:block;
+}
+
+.bubble {
+    background-color: recipes.$white;
+    border-radius: 100%;
+    font-size: 0px;
+    display:block;
+}

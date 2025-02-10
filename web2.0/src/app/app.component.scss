@@ -1,0 +1,7 @@
+@use "../app/shared/recipes.scss";
+
+bubble-bg {
+    position: absolute;
+    top: recipes.$headerHeight;
+    width: 100%;
+}
