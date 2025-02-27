@@ -41,7 +41,7 @@ export class BubbleBgComponent {
 
   @HostListener('mousemove', ['$event'])
   mousemove(event: any) {
-    console.log(event.clientX, event.clientY);
+    //console.log(event.clientX, event.clientY);
   }
 
   createBubbles() {
@@ -60,7 +60,7 @@ export class BubbleBgComponent {
         });
       }
     });
-    console.log(this.bubbleConfig);
+    //console.log(this.bubbleConfig);
   }
 
   getRandomIntegerInclusive(min:number, max:number) {
