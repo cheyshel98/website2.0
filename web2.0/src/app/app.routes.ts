@@ -8,6 +8,7 @@ import { UiUxComponent } from './projects/ui-ux/ui-ux.component';
 import { WebDesignComponent } from './projects/web-design/web-design.component';
 import { GraphicDesignComponent } from './projects/graphic-design/graphic-design.component';
 import { MotionGraphicsComponent } from './projects/motion-graphics/motion-graphics.component';
+import { ExperimentsComponent } from './experiments/experiments/experiments.component';
 
 
 export const routes: Routes = [
@@ -18,6 +19,7 @@ export const routes: Routes = [
     {path: 'portfolio/graphic-design', component: GraphicDesignComponent},
     {path: 'portfolio/motion-graphics', component: MotionGraphicsComponent},
     {path: 'resume', component: ResumeComponent},
-    {path: 'contact', component: ContactComponent},
+    //{path: 'contact', component: ContactComponent},
+    {path: 'experiments', component: ExperimentsComponent},
     {path: '**', component: PageNotFoundComponent}
 ];

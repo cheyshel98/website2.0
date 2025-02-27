@@ -1,0 +1,22 @@
+<div>
+    <svg id="{{svgConfig.id}}">
+        <title *ngIf="svgConfig.title !== ''">{{svgConfig.title}}</title>
+        <desc *ngIf="svgConfig.desc !== ''">{{svgConfig.desc}}</desc>
+        @for (obj of svgConfig.objects; track obj) {
+            @if (obj.type == 'line') {
+                <line class="{{obj.class}}">
+                    @for (child of obj['children']; track child;) {
+                        @if (child.type == 'animate') {
+                            <animate></animate>
+                        }
+                    }
+                </line>
+            }
+        }
+        
+    </svg>
+
+    <div>
+
+    </div>
+</div>

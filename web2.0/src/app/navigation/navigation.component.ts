@@ -26,6 +26,10 @@ export class NavigationComponent {
     //   name: 'Contact',
     //   url: 'contact'
     // }
+    {
+      name: 'Experiments',
+      url: 'experiments'
+    }
   ];
   test:any = 'test'
 }
