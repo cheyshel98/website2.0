@@ -30,14 +30,22 @@ export class SmilAnimationComponent {
     ]
   };
 
+  svgShown:any;
+  svgChildren:any;
+
 
   ngOnInit() {
     this.displayCode();
   }
 
   displayCode() {
-    const svg = document.getElementById(this.svgConfig.id);
+    const svg = document.getElementById(this.svgConfig.id) as HTMLElement;
+    const svgChildren = svg?.childNodes as NodeList;
     console.log(svg);
     console.log(svg?.childNodes);
+    let markupArr = Array.from(svgChildren);
+    console.log(markupArr);
+    this.svgShown = svg.outerHTML;
+    this.svgChildren = svgChildren;
   }
 }

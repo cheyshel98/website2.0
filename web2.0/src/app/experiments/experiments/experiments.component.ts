@@ -22,15 +22,8 @@ export class ExperimentsComponent {
         children: [
           {
             type: 'animate',
-            amount: [3, 2, 3]
-          },
-          {
-            type: 'animate',
-            amount: [3, 2, 3]
-          },
-          {
-            type: 'animate',
-            amount: [3, 2, 3]
+            amount: [3, 2, 3],
+            class: ["test-child-class"]
           }
         ]
       }

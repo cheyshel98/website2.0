@@ -7,7 +7,7 @@
                 <line class="{{obj.class}}">
                     @for (child of obj['children']; track child;) {
                         @if (child.type == 'animate') {
-                            <animate></animate>
+                            <animate class="{{child.class}}"></animate>
                         }
                     }
                 </line>
@@ -17,6 +17,9 @@
     </svg>
 
     <div>
-
+        {{ svgShown }}
+        <code>
+            <span>{{ svgChildren }}</span>
+        </code>
     </div>
 </div>
