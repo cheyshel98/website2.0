@@ -262,3 +262,13 @@ a, button {
         }
     }    
 }
+
+@media screen and (max-width: 611px) {
+    .inline-link {
+        white-space: wrap;
+
+        &:hover:after, &:focus:after {
+            height: 0px;
+        }
+    }
+}
