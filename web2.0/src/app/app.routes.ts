@@ -18,6 +18,6 @@ export const routes: Routes = [
     {path: 'portfolio/graphic-design', component: GraphicDesignComponent},
     {path: 'portfolio/motion-graphics', component: MotionGraphicsComponent},
     {path: 'resume', component: ResumeComponent},
-    {path: 'contact', component: ContactComponent},
+    // {path: 'contact', component: ContactComponent},
     {path: '**', component: PageNotFoundComponent}
 ];
