@@ -22,7 +22,7 @@ export class HomeComponent {
     },
     {
       name: 'PDF Resume',
-      url: '/assets/docs/CheyenneSheltonResume2025-Final.pdf',
+      url: '/assets/docs/CheyenneSheltonResume.pdf',
       img: 'file-text'
     }
   ];
