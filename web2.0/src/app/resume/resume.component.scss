@@ -27,12 +27,18 @@
 
     .subtitle {
         @include recipes.flex-row;
+        font-size: 14px;
         justify-content: space-between;
         border-bottom: 2px dotted recipes.$card-text;
+        padding: 0px 4px;
     }
 
-    ul {
-        padding-left: 15px;
+    .card-body {
+        padding: 8px 0px 0px 8px;
+    }
+
+    ul.card-body {
+        padding-left: 18px;
     }
 }
 
@@ -49,7 +55,26 @@
             border-bottom: 5px double recipes.$accent-border;
             padding-bottom: 25px;
         }
-    }   
+    }  
+    
+    .skills {
+        .card-body {
+            @include recipes.flex-column;
+            height: 140px;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            li {
+                width: fit-content;
+            }
+        }
+    }
+
+    .education {
+        .subtitle {
+            flex-flow: column;
+        }
+    }
     
 }
     
