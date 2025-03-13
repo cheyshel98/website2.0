@@ -63,37 +63,44 @@ a, button {
     font-style: italic;
 }
 
+
+
 .inline-link {
-    border-bottom: 3px solid recipes.$inline-link;
+    border-bottom: 3px solid darken(recipes.$inline-link, 45%);
     position: relative;
-    padding: 2px 4px 0 4px;
+    padding: 3px 3px 0 3px;
     z-index: 1;
+    white-space: nowrap;
 
-    // &:after, &:visited:after {
-    //     content: '';
-    //     display: block;
-    //     position: absolute;
-    //     width: calc(100%);
-    //     bottom: 0;
-    //     left:0;
-    //     background-color: recipes.$inline-link;
-    //     height: 0px;
-    //     z-index: -1;
-    // }
-
-    &:visited {
-        border-color: recipes.$inline-link-vis;
-
-        &:hover:after, &:focus:after {
-            background-color: recipes.$inline-link-vis
-        }
+    &.link-color-sec {
+        border-bottom: 3px solid darken(recipes.$inline-link-sec, 25%);
+    }
+    
+    &:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 0px;
+        width: 100%;
+        z-index: -1;
+        transition: height .2s ease-in-out;
     }
 
-    // &:hover:after, &:focus:after {
-    //     content: '';
-    //     height: 100%;
-    //     transition: height ease-in-out .2s;
-    // }
+    &:focus {
+        outline: none;
+    }
+
+    &:hover:after, &:focus:after {
+        height: 23px;
+        background-color: darken(recipes.$inline-link, 10%);
+        transition: height .2s ease-in-out;
+    }
+
+    &.link-color-sec:hover:after, &.link-color-sec:focus:after {
+        background-color: recipes.$inline-link-sec;
+    }
 }
 
 .block-link {
@@ -147,6 +154,7 @@ a, button {
         width: fit-content;
         z-index: 2;
         color: recipes.$heading-hightlight-text;
+        letter-spacing: .7px;
     
         &:before {
             content: '';
@@ -253,4 +261,14 @@ a, button {
             margin: 0 auto;
         }
     }    
+}
+
+@media screen and (max-width: 611px) {
+    .inline-link {
+        white-space: wrap;
+
+        &:hover:after, &:focus:after {
+            height: 0px;
+        }
+    }
 }
