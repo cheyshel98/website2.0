@@ -10,40 +10,39 @@ import { SharedModule } from '../shared/shared.module';
 })
 export class ResumeComponent {
 
-  resumeData:any = [
+  skills:any = ["Angular", "TypeScript", "JavaScript", "HTML", "CSS", "SCSS", "Figma", "Adobe XD", "Github", "Azure DevOps", "Photoshop", "Illustrator"];
+
+  resumeExp:any = [
     {
       role: 'Software Engineer I',
       company: 'Windstream',
-      time: 'Nov 2020 - Jan 2025',
+      time: '11/2020 - 01/2025',
       duties: [
-        "Collaborated as a team to provide support to customer facing apps using Angular and Typescript",
-        "Devised a plan with business leaders to implement new features",
-        "Maintained existing features with direction from business leaders",
-        "Utilized Swagger to view API details and check functionality",
-        "Refactored aging code in HTML, CSS, and TypeScript",
-        "Reviewed code and gave feedback using Azure DevOps",
-        "Evaluated apps for possible improvements",
-        "Planned action items for improving evaluated app areas",
-        "Created wireframes with Figma to present how features would look and function"
+        "Collaborated with team to develop customer facing apps using Angular and Typescript",
+        "Devised plans with business leaders to implement new features",
+        "Utilized Swagger to view API details and check functionality for Front End integration",
+        "Refactored aging code in HTML, CSS, and Typescript",
+        "Reviewed Pull Requests and provided feedback using Azure DevOps",
+        "Evaluated app for improvements and planned action items within Scrum for implementation",
+        "Created wireframes with Figma to present ideas and proof of concepts"
       ],
     },
     {
       role: 'Professional Assistant I',
       company: 'UADA State Extension Office',
-      time: 'Feb 2020 - Nov 2020',
+      time: '02/2020 - 11/2020',
       duties: [
         "Developed Web Apps using Django, JavaScript, CSS, and HTML",
         "Programmed apps for internal use and external use",
         "Designed concepts to be implemented using Adobe XD",
         "Collaborated with stakeholders to plan new features and designs",
-        "Monitored development schedule and rolled out apps and patches accordingly",
-        "Developed designs to work within accessibility guidelines and laws"
+        "Developed designs to work within WCAG accessibility guidelines and federal laws"
       ],
     },
     {
       role: 'Technical Assistant I',
       company: 'UADA State Extension Office',
-      time: 'Feb 2019 - Feb 2020',
+      time: '02/2019 - 02/2020',
       duties: [
         "Supported all 75 counties in Arkansas with technical expertise",
         "Responded to multiple tickets concurrently",
@@ -55,12 +54,12 @@ export class ResumeComponent {
     },
     {
       role: 'Help-desk Technician',
-      company: 'UALR College of Engineering and Information Technology',
-      time: 'Aug 2016 - Feb 2019',
+      company: 'University of Arkansas College of EIT',
+      time: '08/2016 - 02/2019',
       duties: [
         "Diagnosed issues in various software and hardware while offering excellent customer service",
         "Communicated with staff and students in a professional environment",
-        "Solved multiple tickets concurrently and completed them in a timely manner",
+        "Solved multiple tickets concurrently and completed them in a timely manner in Spiceworks",
         "Maintained and updated machines on various operating systems including Mac OS, Windows, and HP Thin Pro",
         "Supported hardware of machines out of warranty",
         "Drafted user documentation",
