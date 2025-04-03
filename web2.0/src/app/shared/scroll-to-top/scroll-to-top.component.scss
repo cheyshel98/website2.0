@@ -1,0 +1,26 @@
+@use "../recipes.scss";
+
+.scroll-btn {
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    right: 10px;
+    bottom:135px;
+    border-radius: 5px;
+    display:flex;
+    z-index: 1;
+    @include recipes.flex-center;
+
+    background-color: recipes.$heading-highlight;
+    color: recipes.$heading-hightlight-text;
+
+    &:hover, &:focus {
+        background-color: recipes.$footer-bg;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .scroll-btn {
+        right: calc(50% - 570px);
+    }
+}
