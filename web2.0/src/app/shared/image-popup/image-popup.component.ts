@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 export class ImagePopupComponent {
   @Input() src:string = '';
   @Input() alt:string = '';
+  @Input() isSVG:boolean = false;
 
   popup:boolean = false;
 

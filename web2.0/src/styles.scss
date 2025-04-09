@@ -125,7 +125,7 @@ a, button {
     height: fit-content;
     background-color: recipes.$content-callout;
     border-radius: recipes.$radiusMd;
-    padding: 10px;
+    padding: 25px;
 }
 
 //generic container styling
@@ -221,8 +221,16 @@ a, button {
             padding: 20px;
         }
 
-        ol {
+        ol, ul {
             padding: 15px 25px 30px 40px;
+        }
+
+        ol:last-child, ul:last-child {
+            padding-bottom: 15px;
+        }
+
+        .content-callout {
+            margin-bottom: 15px;
         }
     }
 

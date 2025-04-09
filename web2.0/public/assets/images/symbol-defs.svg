@@ -35,5 +35,9 @@
             <path stroke-width="2.6667" stroke-miterlimit="4" stroke-linecap="round" stroke-linejoin="round" d="M20 12l-8 8"></path>
             <path stroke-width="2.6667" stroke-miterlimit="4" stroke-linecap="round" stroke-linejoin="round" d="M12 12l8 8"></path>
         </symbol>
+        <symbol id="icon-arrow-up" viewbox="0 0 32 32" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none">
+            <line xmlns="http://www.w3.org/2000/svg" x1="12" y1="19" x2="12" y2="5"/>
+            <polyline xmlns="http://www.w3.org/2000/svg" points="5 12 12 5 19 12"/>
+        </symbol>
     </defs>
 </svg>
