@@ -60,7 +60,7 @@
     }
 }
 
-@media screen and (min-width: 680px) {
+@media screen and (min-width: 800px) {
     .home-flex {
         @include recipes.flex-row;
         width: 100%;
@@ -73,9 +73,9 @@
     }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 960px) {
     .home-text {
-        margin-top: 30px;
+        margin-top: 15px;
     }
 }
 

@@ -8,14 +8,15 @@
     margin: 0 auto;
     margin-bottom: 15px;
     border: 3px solid recipes.$white;
-
+    border-radius: 8px;
 
     &:hover, &:focus {
         border: 3px solid recipes.$accent-border;
     }
 
     .img {
-        width: 100%;  
+        width: 100%;
+        border-radius: 5px; 
     } 
 }
 
