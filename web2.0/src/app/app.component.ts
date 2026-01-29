@@ -10,19 +10,18 @@ import { Title } from '@angular/platform-browser';
 import { filter, map } from 'rxjs';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    RouterOutlet, 
-    NavigationComponent, 
-    FooterComponent, 
-    CommonModule, 
-    RouterLink, 
-    RouterLinkActive,
-    BubbleBgComponent
-  ],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss', '../styles.scss']
+    selector: 'app-root',
+    imports: [
+        RouterOutlet,
+        NavigationComponent,
+        FooterComponent,
+        CommonModule,
+        RouterLink,
+        RouterLinkActive,
+        BubbleBgComponent
+    ],
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss', '../styles.scss']
 })
 export class AppComponent {
 

@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 
 @Component({
-  selector: 'app-navigation',
-  standalone: true,
-  imports: [SharedModule],
-  templateUrl: './navigation.component.html',
-  styleUrl: './navigation.component.scss'
+    selector: 'app-navigation',
+    imports: [SharedModule],
+    templateUrl: './navigation.component.html',
+    styleUrl: './navigation.component.scss'
 })
 export class NavigationComponent {
   links:any = [

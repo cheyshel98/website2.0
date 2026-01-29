@@ -3,11 +3,10 @@ import { SharedModule } from '../shared.module';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'bubble-bg',
-  standalone: true,
-  imports: [SharedModule],
-  templateUrl: './bubble-bg.component.html',
-  styleUrl: './bubble-bg.component.scss'
+    selector: 'bubble-bg',
+    imports: [SharedModule],
+    templateUrl: './bubble-bg.component.html',
+    styleUrl: './bubble-bg.component.scss'
 })
 export class BubbleBgComponent {
 
