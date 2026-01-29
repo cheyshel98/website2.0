@@ -40,9 +40,41 @@ header {
         list-style: none;
         gap: 15px;
 
-        a {
+        .block-link {
             cursor: pointer;
             font-size: 18px;
+            position: relative;
+            
+            &:after  {
+                content: '';
+                height: 4px;
+                display: block;
+                position: absolute;
+                bottom: -3px;
+                left: 50%;
+                width: 0px;
+            }
+
+            &:hover:not(.is-active):after, 
+            &:focus:not(.is-active):after {
+                width: 100%;
+                translate: -50%;
+                transition: .50s width ease, .15s translate ease;
+                background-color: recipes.$block-link-hover;
+            }
+
+            &.is-active:hover:after,
+            &.is-active:focus:after {
+                left: 0px;
+                width: 100%;
+                background-color: recipes.$block-link-hover;
+            }
+
+            &.is-active:after {
+                width: 100%;
+                left: 0px;
+                background-color: recipes.$block-link-active;
+            }
         }
     }
 

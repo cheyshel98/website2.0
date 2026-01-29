@@ -49,6 +49,10 @@
 
             &:hover, &:focus {
                 background-color: recipes.$project-btn-effect;
+                translate: 5px -5px;
+                transition: .3s translate ease-in-out, .3s box-shadow ease-in-out;
+                box-shadow: -5px 5px 0px rgb(0 0 0 / 0.2), inset -1px 0px 1px rgb(255 255 255 / 0.89);
+                
             }
         }
     }
