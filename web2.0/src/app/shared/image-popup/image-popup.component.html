@@ -1,16 +1,22 @@
 
 <a tabindex="0" class="img-link" (click)="imgPopup(true)" (keydown.enter)="imgPopup(true)" title="Enlarge Image">
-    <img class="img" [src]="'/assets/images/' + src" [alt]="alt">
+  <img class="img" [src]="'/assets/images/' + src" [alt]="alt">
 </a>
 
-<div class="overlay" id="img-popup" *ngIf="popup" (keydown)="initTrapFocus($event, 'img-popup')">
+@if (popup) {
+  <div class="overlay" id="img-popup" (keydown)="initTrapFocus($event, 'img-popup')">
     <div class="img-group">
-        <button tabindex="0" class="img-close" (click)="imgPopup(false)" *ngIf="popup" title="Close">
-            <svg class="svg-icon" width="25" height="25">
-                <use [attr.href]="'/assets/images/symbol-defs.svg#icon-x-circle'"></use>
-            </svg>
+      @if (popup) {
+        <button tabindex="0" class="img-close" (click)="imgPopup(false)" title="Close">
+          <svg class="svg-icon" width="25" height="25">
+            <use [attr.href]="'/assets/images/symbol-defs.svg#icon-x-circle'"></use>
+          </svg>
         </button>
-        <img class="img" [src]="'/assets/images/' + src" [alt]="alt">
-        <p class="img-text" *ngIf="alt.length > 0">{{ alt }}</p>
+      }
+      <img class="img" [src]="'/assets/images/' + src" [alt]="alt">
+      @if (alt.length > 0) {
+        <p class="img-text">{{ alt }}</p>
+      }
     </div>
-</div>
+  </div>
+}

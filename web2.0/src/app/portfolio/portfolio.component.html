@@ -1,26 +1,27 @@
 <article class="container project">
-    <h1>Portfolio</h1>
-    <section class="website">
-        <h2>This Website</h2>
-        <p class="content-callout">
-            The website you are currently viewing was created by me using Angular v18. I wrote custom SCSS, HTML, and TypeScript
-            which are available to view on my <a class="inline-link link-color-sec" href="https://github.com/cheyshel98/website2.0.git" target="_blank">GitHub</a>. This site utilizes mobile-first design and can be used on phones with screens
-            as small as 320 pixels wide. In addition to mobile support, this website is also fully accessible by keyboard and colors
-            were chosen to comply with Web Content Accessibility Guidelines (WCAG) for visual accessibility.
-        </p>
-    </section>
-    <section class="projects">
-        <h2>Projects</h2>
-        <div class="project-links">
-            <a *ngFor="let link of subPageLinks" routerLink="/{{link.url}}">
-                <span>
-                    {{ link.name }}
-                </span>
-                
-            </a>
-        </div>
-        
-    </section>
-    
+  <h1>Portfolio</h1>
+  <section class="website">
+    <h2>This Website</h2>
+    <p class="content-callout">
+      The website you are currently viewing was created by me using Angular v18. I wrote custom SCSS, HTML, and TypeScript
+      which are available to view on my <a class="inline-link link-color-sec" href="https://github.com/cheyshel98/website2.0.git" target="_blank">GitHub</a>. This site utilizes mobile-first design and can be used on phones with screens
+      as small as 320 pixels wide. In addition to mobile support, this website is also fully accessible by keyboard and colors
+      were chosen to comply with Web Content Accessibility Guidelines (WCAG) for visual accessibility.
+    </p>
+  </section>
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="project-links">
+      @for (link of subPageLinks; track link) {
+        <a routerLink="/{{link.url}}">
+          <span>
+            {{ link.name }}
+          </span>
+        </a>
+      }
+    </div>
+
+  </section>
+
 
 </article>

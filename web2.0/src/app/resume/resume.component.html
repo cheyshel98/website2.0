@@ -1,49 +1,55 @@
 <article class="container">
-    <h1>Resume</h1>
-    <div class="skills-edu">
-        <section class="education">
-            <h2>Education</h2>
-            <div class="card">
-                <h4 class="title">University of Arkansas at Little Rock</h4>
-                <h5 role="doc-subtitle" class="subtitle">
-                    <span>B.A. Web Design and Development</span>
-                    <span>Minor in IT | Minor in Digital Graphics</span>
-        
-                </h5>
-                <div class="card-body">
-                    <p><span class="bold">Years attended:</span> 2016 - 2020</p>
-                    <p><span class="bold">Graduated:</span> 05/2020</p>
-                    <p><span class="bold">GPA:</span> 3.80</p>
-                </div>
-            </div>
-        </section>
-        <section class="skills">
-            <h2>Skills</h2>
-            <div class="card">
-                <ul class="card-body">
-                    <li *ngFor="let skill of skills">
-                        {{skill}}
-                    </li>
-                </ul>
-            </div>
-        </section>
-    </div>
-    <section class="experience">
-        <h2>Experience</h2>
-        <div class="card-set">
-            <div class="card" *ngFor="let job of resumeExp;">
-                <h4 class="title">{{ job.role }}</h4>
-                <h5 role="doc-subtitle" class="subtitle">
-                    {{ job.company }} 
-                    <span>{{ job.time }}</span>
-                </h5>
-                <ul class="card-body">
-                    <li *ngFor="let duty of job['duties']">
-                        {{duty}}
-                    </li>
-                </ul>
-            </div>
+  <h1>Resume</h1>
+  <div class="skills-edu">
+    <section class="education">
+      <h2>Education</h2>
+      <div class="card">
+        <h4 class="title">University of Arkansas at Little Rock</h4>
+        <h5 role="doc-subtitle" class="subtitle">
+          <span>B.A. Web Design and Development</span>
+          <span>Minor in IT | Minor in Digital Graphics</span>
+
+        </h5>
+        <div class="card-body">
+          <p><span class="bold">Years attended:</span> 2016 - 2020</p>
+          <p><span class="bold">Graduated:</span> 05/2020</p>
+          <p><span class="bold">GPA:</span> 3.80</p>
         </div>
-        
+      </div>
     </section>
+    <section class="skills">
+      <h2>Skills</h2>
+      <div class="card">
+        <ul class="card-body">
+          @for (skill of skills; track skill) {
+            <li>
+              {{skill}}
+            </li>
+          }
+        </ul>
+      </div>
+    </section>
+  </div>
+  <section class="experience">
+    <h2>Experience</h2>
+    <div class="card-set">
+      @for (job of resumeExp; track job) {
+        <div class="card">
+          <h4 class="title">{{ job.role }}</h4>
+          <h5 role="doc-subtitle" class="subtitle">
+            {{ job.company }}
+            <span>{{ job.time }}</span>
+          </h5>
+          <ul class="card-body">
+            @for (duty of job['duties']; track duty) {
+              <li>
+                {{duty}}
+              </li>
+            }
+          </ul>
+        </div>
+      }
+    </div>
+
+  </section>
 </article>

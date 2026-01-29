@@ -1,12 +1,14 @@
 <header>
-    <div class="nav-group">
-        <span class="nav-name">Cheyenne Shelton</span>
-        <nav>
-            <ul>
-                <li *ngFor="let link of links">
-                    <a class="block-link" [routerLinkActive]="['is-active']" routerLink="/{{link.url}}" >{{link.name}}</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+  <div class="nav-group">
+    <span class="nav-name">Cheyenne Shelton</span>
+    <nav>
+      <ul>
+        @for (link of links; track link) {
+          <li>
+            <a class="block-link" [routerLinkActive]="['is-active']" routerLink="/{{link.url}}" >{{link.name}}</a>
+          </li>
+        }
+      </ul>
+    </nav>
+  </div>
 </header>

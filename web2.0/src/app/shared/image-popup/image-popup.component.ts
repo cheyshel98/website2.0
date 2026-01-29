@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
     selector: 'app-image-popup',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './image-popup.component.html',
     styleUrl: './image-popup.component.scss'
 })

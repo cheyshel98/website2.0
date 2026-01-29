@@ -1,4 +1,8 @@
-<div class="bubble-layer layer-{{i}}" *ngFor="let config of bubbleConfig; let i = index" >
-    <span class="bubble" [ngStyle]="{height: bubble.size + 'px', width: bubble.size + 'px'}"  *ngFor="let bubble of config.bubbles">{{bubble.size}}</span>
-</div>
+@for (config of bubbleConfig; track config; let i = $index) {
+  <div class="bubble-layer layer-{{i}}" >
+    @for (bubble of config.bubbles; track bubble) {
+      <span class="bubble" [ngStyle]="{height: bubble.size + 'px', width: bubble.size + 'px'}" >{{bubble.size}}</span>
+    }
+  </div>
+}
 

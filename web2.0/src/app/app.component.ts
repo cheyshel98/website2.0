@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, RouterOutlet } from '@angular/router';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
-import { CommonModule } from '@angular/common';
+
 import { RouterLink, Router } from '@angular/router';
 import { RouterLinkActive } from '@angular/router';
 import { BubbleBgComponent } from './shared/bubble-bg/bubble-bg.component';
@@ -12,14 +12,13 @@ import { filter, map } from 'rxjs';
 @Component({
     selector: 'app-root',
     imports: [
-        RouterOutlet,
-        NavigationComponent,
-        FooterComponent,
-        CommonModule,
-        RouterLink,
-        RouterLinkActive,
-        BubbleBgComponent
-    ],
+    RouterOutlet,
+    NavigationComponent,
+    FooterComponent,
+    RouterLink,
+    RouterLinkActive,
+    BubbleBgComponent
+],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss', '../styles.scss']
 })
